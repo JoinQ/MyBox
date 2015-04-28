@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toptabtext_active">#ff4d4d</color>
+    <color name="toptabtext_release">#000000</color>
+
+    <color name="actionbarColor">#ff4d4d</color>
+    <color name="tab_select">#ff4d4d</color>
+    <color name="tab_noselect">#939393</color>
+    <color name="tab_divider">#dcdcdc</color>
+
+    <color name="backgroud">#e5e7ed</color>
+</resources>
