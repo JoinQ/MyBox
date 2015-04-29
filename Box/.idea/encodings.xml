@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/app/BoxActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/app/MyApplication.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/MainActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/ExpressFragmnet.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/ArrivedFragment.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/QueryFragment.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/SendMeFragment.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/market/MarketFragment.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/me/MeFragmnet.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/launch/LaunchActivity.java" charset="UTF-8" />
-  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
 </project>
+
