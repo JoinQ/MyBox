@@ -5,5 +5,4 @@
     android:background="@color/backgroud"
     android:orientation="vertical" >
 
-
 </LinearLayout>
