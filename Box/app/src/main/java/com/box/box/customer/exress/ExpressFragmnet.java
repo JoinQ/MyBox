@@ -3,9 +3,11 @@ package com.box.box.customer.exress;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +21,14 @@ import com.box.box.customer.exress.functionfragment.QueryFragment;
 import com.box.box.customer.exress.functionfragment.SendMeFragment;
 import com.box.util.Utils;
 
+import java.util.List;
+
 public class ExpressFragmnet extends Fragment implements View.OnClickListener {
     private FragmentManager fm;
     private ArrivedFragment mArrivedFragment;
     private QueryFragment mQueryFragment;
     private SendMeFragment mSendMeFragment;
+    private List<View> view;
 
     private TextView mArrivedText;
     private TextView mSendMeText;
@@ -35,6 +40,12 @@ public class ExpressFragmnet extends Fragment implements View.OnClickListener {
     private static final String ARRIVED_ID = "0";
     private static final String SEND_ID = "1";
     private static final String QUERY_ID = "2";
+
+    private int tab_i = 0;
+    private boolean tab_p;
+
+    public ExpressFragmnet() {
+    }
 
 
     @Override
@@ -73,8 +84,8 @@ public class ExpressFragmnet extends Fragment implements View.OnClickListener {
         mQueryText = (TextView) v.findViewById(R.id.tobtab_query);
         mSlider = (ImageView) v.findViewById(R.id.slider);
         mVp = (ViewPager) v.findViewById(R.id.viewPager);
-
         mSlider.setLayoutParams(new LinearLayout.LayoutParams(Utils.getScreenWidth() / 3, ViewGroup.LayoutParams.MATCH_PARENT));
+        mVp.setOffscreenPageLimit(3);
         mVp.setAdapter(new VpAdapter(fm));
     }
 
@@ -87,6 +98,36 @@ public class ExpressFragmnet extends Fragment implements View.OnClickListener {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
                 mSlider.setX((position + positionOffset) * Utils.getScreenWidth() / 3);
+
+                fm.findFragmentByTag(position + "").getView();
+                if (positionOffsetPixels == 0) {
+                    tab_p = false;
+                }
+
+                switch (position) {
+                    case 0:
+                        fm.findFragmentByTag(position + "").getView().setAlpha(1 - Math.abs(positionOffset));
+                        fm.findFragmentByTag(position + 1 + "").getView().setAlpha(Math.abs(positionOffset));
+                        break;
+                    case 1:
+                        if (tab_i < positionOffsetPixels || tab_p) {
+                            fm.findFragmentByTag(position + "").getView().setAlpha(1 - Math.abs(positionOffset));
+                            fm.findFragmentByTag(position + 1 + "").getView().setAlpha(Math.abs(positionOffset));
+                            tab_p = true;
+                        } else {
+                            fm.findFragmentByTag(position + "").getView().setAlpha(1 - Math.abs(positionOffset));
+                            fm.findFragmentByTag(position - 1 + "").getView().setAlpha(Math.abs(positionOffset));
+                        }
+                        break;
+                    case 2:
+                        fm.findFragmentByTag(position + "").getView().setAlpha(1 - Math.abs(positionOffset));
+                        fm.findFragmentByTag(position - 1 + "").getView().setAlpha(Math.abs(positionOffset));
+                        break;
+
+                    default:
+                        break;
+                }
+                tab_i = positionOffsetPixels;
             }
 
             @Override
@@ -100,6 +141,7 @@ public class ExpressFragmnet extends Fragment implements View.OnClickListener {
                         mArrivedText.setTextColor(getResources().getColor(R.color.toptabtext_active));
                         break;
                     case 1:
+                        mSendMeFragment.setLayout();
                         mSendMeText.setTextColor(getResources().getColor(R.color.toptabtext_active));
                         break;
                     case 2:

@@ -9,4 +9,5 @@
     <color name="tab_divider">#dcdcdc</color>
 
     <color name="backgroud">#e5e7ed</color>
+    <color name="grayBg_deep">#dedbdb</color>
 </resources>
