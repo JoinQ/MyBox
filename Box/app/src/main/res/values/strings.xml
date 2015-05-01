@@ -1,7 +1,18 @@
 <resources>
     <string name="app_name">Box</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="title_activity_box">BoxActivity</string>
+
+    <string name="recycleradapter_receiving">待收货 (%1$s)</string>
+    <string name="recycleradapter_received">已收货 (%1$s)</string>
+    <string name="recycleradapter_onroad">在途中 (%1$s)</string>
+
+
+    <string name="recycleradapter_time">到达时间：%1$s</string>
+    <string name="recycleradapter_place">到达地址：%1$s</string>
+
+    <string name="recycleradapter_state">状态：%1$s</string>
+    <string name="recycleradapter_over">预计到达：%1$s</string>
+    <string name="recycleradapter_pinglun">评论：%1$s</string>
+
 </resources>
