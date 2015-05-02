@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/smssdk_bt_disenable" />
+
+    <corners android:radius="4dp" />
+
+</shape><!-- From: file:/F:/java/andriod/android_studio/android_gtihub/Box/SMSSDK/src/main/res/drawable/smssdk_btn_disenable.xml -->
