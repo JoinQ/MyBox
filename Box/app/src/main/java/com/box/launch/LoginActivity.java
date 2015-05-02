@@ -2,6 +2,8 @@ package com.box.launch;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,6 +21,8 @@ import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 import cn.smssdk.gui.ForgetPage;
 import cn.smssdk.gui.RegisterPage;
+
+import static com.mob.tools.utils.R.getBitmapRes;
 
 public class LoginActivity extends BoxActivity implements View.OnClickListener {
     private Button login_bt_login;
@@ -44,6 +48,7 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
         login_tv_register = (TextView) findViewById(R.id.login_tv_register);
         login_tv_forget = (TextView) findViewById(R.id.login_tv_forget);
         login_iv_head = (ImageView) findViewById(R.id.login_iv_head);
+
 
         login_return.setOnClickListener(this);
         login_bt_login.setOnClickListener(this); //登陆
@@ -117,4 +122,5 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
         super.onDestroy();
         login_iv_head.destroyDrawingCache();
     }
+
 }
