@@ -145,6 +145,7 @@ public class ExpressFragmnet extends Fragment implements View.OnClickListener {
                         mSendMeText.setTextColor(getResources().getColor(R.color.toptabtext_active));
                         break;
                     case 2:
+                        mQueryFragment.setLayout();
                         mQueryText.setTextColor(getResources().getColor(R.color.toptabtext_active));
                         break;
                 }

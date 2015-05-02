@@ -2,6 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/query_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView xmlns:recycler="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/query_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        recycler:layout_empty="@layout/view_empty"
+        recycler:layout_moreProgress="@layout/view_progress"
+        recycler:layout_progress="@layout/view_progress"
+        recycler:scrollbarStyle="insideInset" />
 
 </LinearLayout>

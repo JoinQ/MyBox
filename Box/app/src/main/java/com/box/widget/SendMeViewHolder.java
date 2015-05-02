@@ -50,7 +50,7 @@ public class SendMeViewHolder extends BaseViewHolder<SendingThing, SendedThing> 
         mNameText.setText(data.getName());
         mPhoneText.setText(data.getPhone());
         mSecondLineText.setText(context.getString(R.string.recycleradapter_state, data.getState()));
-        mThreeLineText.setText(context.getString(R.string.recycleradapter_over, data.getOver()));
+        mThreeLineText.setText(context.getString(R.string.recycleradapter_gettime, data.getOver()));
         mComeRight.setVisibility(View.VISIBLE);
         mPingLunBtn.setVisibility(View.INVISIBLE);
     }

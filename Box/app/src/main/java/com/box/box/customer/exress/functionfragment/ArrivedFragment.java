@@ -27,8 +27,8 @@ public class ArrivedFragment extends Fragment {
         super.onCreate(savedInstanceState);
         ArrivedThing[] arrivedThings = {new ArrivedThing("3", R.drawable.coporation1, "顺风", "12345678901", "2015-04-24 2:00pm", "景苑7栋1单元10号柜子"),
                 new ArrivedThing("3", R.drawable.coporation2, "中通", "12345678901", "2015-04-24 3:00pm", "景苑7栋1单元10号柜子")};
-        ArrivingThing[] arrivingThings = {new ArrivingThing("2", R.drawable.coporation1, "顺风", "1234567980", "已取", "非常好啊！"),
-                new ArrivingThing("2", R.drawable.coporation2, "中通", "1234567980", "已取", "真垃圾！")};
+        ArrivingThing[] arrivingThings = {new ArrivingThing("2", R.drawable.coporation1, "顺风", "1234567980", "2015-04-24 1:00pm", "非常好啊！"),
+                new ArrivingThing("2", R.drawable.coporation2, "中通", "1234567980", "2015-04-24 2:00pm", "真垃圾！")};
         things = new Things<ArrivedThing, ArrivingThing>(arrivedThings, arrivingThings);
         adapter = new ArriveRecyclerAdapter(things, getActivity());
     }

@@ -2,7 +2,11 @@ package com.box.box.customer;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.box.app.BoxActivity;
@@ -10,10 +14,11 @@ import com.box.box.R;
 import com.box.box.customer.exress.ExpressFragmnet;
 import com.box.box.customer.market.MarketFragment;
 import com.box.box.customer.me.MeFragmnet;
+import com.box.launch.LoginActivity;
 import com.box.view.Tab;
 
 
-public class MainActivity extends BoxActivity implements View.OnClickListener{
+public class MainActivity extends BoxActivity implements View.OnClickListener {
     private FragmentManager mFm;
     private Fragment mFragment;
     private ExpressFragmnet mExpressFragment;
@@ -120,5 +125,24 @@ public class MainActivity extends BoxActivity implements View.OnClickListener{
             default:
                 break;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.user:
+                //用户数据
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

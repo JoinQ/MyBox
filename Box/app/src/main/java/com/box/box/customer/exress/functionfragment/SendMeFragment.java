@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.AnimationSet;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 
 import com.box.box.R;
@@ -80,11 +82,22 @@ public class SendMeFragment extends Fragment {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ((LinearLayout) root.findViewById(R.id.sendme_header)).addView(LayoutInflater.from(getActivity()).inflate(R.layout.sendme_header, null, false));
+                    ((LinearLayout) root.findViewById(R.id.sendme_header)).addView(LayoutInflater.from(getActivity()).inflate(R.layout.header_sendme, null, false));
+                    SendMeFragment.this.getView().startAnimation(getAlphaAnimation());
                     initView(root);
                 }
             }, 300);
         }
+    }
+
+    private AnimationSet getAlphaAnimation() {
+        AnimationSet animationSet = new AnimationSet(false);
+        AlphaAnimation animation = new AlphaAnimation(0, 1);
+        animation.setInterpolator(new DecelerateInterpolator());
+        animation.setDuration(300);
+        animation.setFillAfter(true);
+        animationSet.addAnimation(animation);
+        return  animationSet;
     }
 
 }

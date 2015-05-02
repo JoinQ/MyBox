@@ -7,10 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.box.box.R;
-import com.box.mode.ArrivedThing;
-import com.box.mode.ArrivingThing;
+import com.box.mode.QueryingGThing;
+import com.box.mode.QueryingSThing;
 
-public class ArriveViewHolder extends BaseViewHolder<ArrivedThing, ArrivingThing> {
+public class QueryViewHolder extends BaseViewHolder<QueryingSThing, QueryingGThing> {
     private TextView mTitleText;
     private TextView mNameText;
     private TextView mPhoneText;
@@ -22,7 +22,7 @@ public class ArriveViewHolder extends BaseViewHolder<ArrivedThing, ArrivingThing
     private ImageView mHeader;
     private Context context;
 
-    public ArriveViewHolder(ViewGroup parent) {
+    public QueryViewHolder(ViewGroup parent) {
         super(parent, R.layout.recyclerview_adapter);
         context = parent.getContext();
         mTitleText = (TextView) itemView.findViewById(R.id.recyclerView_title);
@@ -36,11 +36,11 @@ public class ArriveViewHolder extends BaseViewHolder<ArrivedThing, ArrivingThing
     }
 
     @Override
-    public void setFirstData(ArrivedThing data, boolean isFirst) {
+    public void setFirstData(QueryingSThing data, boolean isFirst) {
         super.setFirstData(data, false);
         if (isFirst) {
             mTitleText.setVisibility(View.VISIBLE);
-            mTitleText.setText(context.getString(R.string.recycleradapter_receiving, data.getNumber()));
+            mTitleText.setText(context.getString(R.string.recycleradapter_wayget, data.getNumber()));
         } else {
             mTitleText.setVisibility(View.GONE);
         }
@@ -48,27 +48,26 @@ public class ArriveViewHolder extends BaseViewHolder<ArrivedThing, ArrivingThing
         mNameText.setText(data.getName());
         mPhoneText.setText(data.getPhone());
         mSecondLineText.setText(context.getString(R.string.recycleradapter_time, data.getTime()));
-        mThreeLineText.setText(context.getString(R.string.recycleradapter_place, data.getPlace()));
+        mThreeLineText.setText(context.getString(R.string.recycleradapter_state, data.getState()));
         mComeRight.setVisibility(View.VISIBLE);
         mPingLunBtn.setVisibility(View.INVISIBLE);
     }
 
     @Override
-    public void setSecondData(ArrivingThing data, boolean isFirst) {
+    public void setSecondData(QueryingGThing data, boolean isFirst) {
         super.setSecondData(data, false);
         if (isFirst) {
             mTitleText.setVisibility(View.VISIBLE);
-            mTitleText.setText(context.getString(R.string.recycleradapter_received, data.getNumber()));
+            mTitleText.setText(context.getString(R.string.recycleradapter_waysend, data.getNumber()));
         } else {
             mTitleText.setVisibility(View.GONE);
         }
         mHeader.setImageResource(data.getHeadImgId());
         mNameText.setText(data.getName());
         mPhoneText.setText(data.getPhone());
-        mSecondLineText.setText(context.getString(R.string.recycleradapter_gettime, data.getState()));
-        mThreeLineText.setText(context.getString(R.string.recycleradapter_pinglun, data.getPinglun()));
-        mPingLunBtn.setVisibility(View.VISIBLE);
-        mPingLunBtn.setText("已评");
-        mComeRight.setVisibility(View.INVISIBLE);
+        mSecondLineText.setText(context.getString(R.string.recycleradapter_time, data.getTime()));
+        mThreeLineText.setText(context.getString(R.string.recycleradapter_state, data.getState()));
+        mPingLunBtn.setVisibility(View.INVISIBLE);
+        mComeRight.setVisibility(View.VISIBLE);
     }
 }

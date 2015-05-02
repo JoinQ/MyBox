@@ -27,4 +27,5 @@ dependencies {
     compile 'com.pnikosis:materialish-progress:1.5'
     compile 'com.android.support:support-annotations:22.0.0'
     compile 'com.android.support:support-annotations:22.0.0'
+    compile project(':SMSSDK')
 }
