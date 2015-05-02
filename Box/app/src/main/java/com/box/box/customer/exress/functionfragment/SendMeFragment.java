@@ -82,7 +82,7 @@ public class SendMeFragment extends Fragment {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ((LinearLayout) root.findViewById(R.id.sendme_header)).addView(LayoutInflater.from(getActivity()).inflate(R.layout.header_sendme, null, false));
+                    ((LinearLayout) root.findViewById(R.id.sendme_header)).addView(LayoutInflater.from(getActivity()).inflate(R.layout.header_sendme, null));
                     SendMeFragment.this.getView().startAnimation(getAlphaAnimation());
                     initView(root);
                 }

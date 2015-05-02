@@ -5,17 +5,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.box.app.BoxActivity;
 import com.box.box.R;
 import com.box.box.customer.MainActivity;
 
-public class RegisterActivity extends BoxActivity implements View.OnClickListener{
+public class RegisterActivity extends BoxActivity implements View.OnClickListener {
 
     private Button register_bt_return;
     private Button register_bt_next;
     private TextView register_tv_congratulations;
+    private ImageView success_img;
     private Intent intent;
 
     private String congratulations = "";
@@ -39,6 +41,7 @@ public class RegisterActivity extends BoxActivity implements View.OnClickListene
         register_tv_congratulations = (TextView) findViewById(R.id.register_tv_congratulations);
         register_bt_return = (Button) findViewById(R.id.register_bt_return);
         register_bt_next = (Button) findViewById(R.id.register_bt_next);
+        success_img = (ImageView) findViewById(R.id.register_img_success);
 
         switch (congratulations) {
             case "注册成功":
@@ -67,5 +70,12 @@ public class RegisterActivity extends BoxActivity implements View.OnClickListene
         }
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        success_img.destroyDrawingCache();
+
     }
 }

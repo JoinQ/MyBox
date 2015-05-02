@@ -111,4 +111,10 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
                 break;
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        login_iv_head.destroyDrawingCache();
+    }
 }
