@@ -17,5 +17,9 @@
 
     <string name="recycleradapter_state">详情：%1$s</string>
     <string name="recycleradapter_pinglun">评论：%1$s</string>
+    <string name="title_activity_express_information">ExpressInformationActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

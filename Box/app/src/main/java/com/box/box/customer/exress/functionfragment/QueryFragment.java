@@ -1,10 +1,12 @@
 package com.box.box.customer.exress.functionfragment;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.LinearLayout;
 
 import com.box.box.R;
+import com.box.box.customer.exress.ExpressInformationActivity;
 import com.box.mode.QueryingGThing;
 import com.box.mode.QueryingSThing;
 import com.box.mode.Things;
@@ -71,6 +74,8 @@ public class QueryFragment extends Fragment {
                 } else {
                     Utils.Toast("ok");
                 }
+                Log.i("ExpressInformation", "ExpressInformationActivity");
+                startActivity(new Intent(QueryFragment.this.getActivity(), ExpressInformationActivity.class));
             }
         });
     }

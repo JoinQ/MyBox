@@ -10,4 +10,6 @@
 
     <color name="backgroud">#e5e7ed</color>
     <color name="grayBg_deep">#dedbdb</color>
+
+    <color name="express_information_backgrounf">#ebebeb</color>
 </resources>
