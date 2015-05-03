@@ -1,6 +1,5 @@
 package com.box.widget;
 
-import android.app.Activity;
 import android.content.Context;
 import android.view.ViewGroup;
 
@@ -9,7 +8,6 @@ import com.box.mode.ArrivingThing;
 import com.box.mode.Things;
 
 public class ArriveRecyclerAdapter extends MyRecyclerAdapter<Things> {
-    private Context context;
     private ArrivedThing[] arrivedThings;
     private ArrivingThing[] arrivingThings;
 
@@ -21,7 +19,6 @@ public class ArriveRecyclerAdapter extends MyRecyclerAdapter<Things> {
             arrivedThings = things.getT();
             arrivingThings = things.getM();
         }
-        this.context = context;
     }
 
     @Override

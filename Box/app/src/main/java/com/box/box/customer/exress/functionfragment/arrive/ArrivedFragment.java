@@ -1,4 +1,4 @@
-package com.box.box.customer.exress.functionfragment;
+package com.box.box.customer.exress.functionfragment.arrive;
 
 import android.app.Fragment;
 import android.os.Bundle;

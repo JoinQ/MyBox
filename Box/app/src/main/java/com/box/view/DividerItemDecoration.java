@@ -1,4 +1,4 @@
-package com.box.widget;
+package com.box.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

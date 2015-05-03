@@ -12,6 +12,7 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
 
     private List<T> list;
     private T things;
+    private T[] arry;
     private Context context;
 
     public MyRecyclerAdapter(T things, Context context) {
@@ -23,9 +24,15 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
         this.context = context;
     }
 
+    public MyRecyclerAdapter(T[] arry, Context context) {
+        this.arry = arry;
+        this.context = context;
+    }
+
     public void clear() {
         things = null;
         list = null;
+        arry = null;
         notifyDataSetChanged();
     }
 
@@ -67,7 +74,11 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
             return adCount + aingCount;
         } else {
             if (list == null) {
-                return 0;
+                if (arry == null) {
+                    return 0;
+                } else {
+                    return arry.length;
+                }
             }
             return list.size();
         }

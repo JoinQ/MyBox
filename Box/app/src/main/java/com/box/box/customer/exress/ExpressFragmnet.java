@@ -3,11 +3,9 @@ package com.box.box.customer.exress;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +14,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.box.box.R;
-import com.box.box.customer.exress.functionfragment.ArrivedFragment;
-import com.box.box.customer.exress.functionfragment.QueryFragment;
-import com.box.box.customer.exress.functionfragment.SendMeFragment;
+import com.box.box.customer.exress.functionfragment.arrive.ArrivedFragment;
+import com.box.box.customer.exress.functionfragment.query.QueryFragment;
+import com.box.box.customer.exress.functionfragment.sendme.SendMeFragment;
 import com.box.util.Utils;
 
 import java.util.List;

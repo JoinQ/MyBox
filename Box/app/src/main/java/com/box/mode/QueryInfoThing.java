@@ -1,15 +1,17 @@
 package com.box.mode;
 
-public class ExpressInfoThing {
+public class QueryInfoThing {
+
     public int image;
     public String status;
     public String time;
 
-    public ExpressInfoThing(int image, String status, String time) {
+    public QueryInfoThing(int image, String status, String time) {
         this.image = image;
         this.status = status;
         this.time = time;
     }
+
     public int getImage() {
         return image;
     }
@@ -33,5 +35,4 @@ public class ExpressInfoThing {
     public void setTime(String time) {
         this.time = time;
     }
-
 }
