@@ -24,14 +24,14 @@ public class QueryInfoActivity extends BoxActivity {
 
         ActionBar actionBar = this.getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("ÎïÁ÷ĞÅÏ¢");
+        actionBar.setTitle("ç‰©æµä¿¡æ¯");
         init();
     }
 
     private void init() {
-        QueryInfoThing[] queryInfoThing = {new QueryInfoThing(R.drawable.query_info_red, "ÒÑµ½´ïÓå±±XXĞ¡ÇøXX¶°XX¹ñ5ºÅ", "2015-04-24  14£º00"),
-                new QueryInfoThing(R.drawable.query_info_gray, "ÕıÔÚÅÉ¼ş£¨ÅÉ¼şÈË£º³ÂÏÈÉú£¬µç»°£º12345678900£©", "2015-04-24  9£º00"),
-                new QueryInfoThing(R.drawable.query_info_gray, "¿ìµİÒÑµ½´ïÖØÇì·Ö²¦ÖĞĞÄ£¬µÈ´ıÅÉ¼şÖĞ", "2015-04-23  14£º00")};
+        QueryInfoThing[] queryInfoThing = {new QueryInfoThing(R.drawable.query_info_red, "å·²åˆ°è¾¾æ¸åŒ—XXå°åŒºXXæ ‹XXæŸœ5å·", "2015-04-24  14ï¼š00"),
+                new QueryInfoThing(R.drawable.query_info_gray, "æ­£åœ¨æ´¾ä»¶ï¼ˆæ´¾ä»¶äººï¼šé™ˆå…ˆç”Ÿï¼Œç”µè¯ï¼š12345678900ï¼‰", "2015-04-24  9ï¼š00"),
+                new QueryInfoThing(R.drawable.query_info_gray, "å¿«é€’å·²åˆ°è¾¾é‡åº†åˆ†æ‹¨ä¸­å¿ƒï¼Œç­‰å¾…æ´¾ä»¶ä¸­", "2015-04-23  14ï¼š00")};
 
         recyclerView = (RecyclerView) findViewById(R.id.express_info_rv_timeline);
         recyclerView.setHasFixedSize(true);
