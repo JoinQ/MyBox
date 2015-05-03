@@ -41,6 +41,19 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
         notifyDataSetChanged();
     }
 
+    public T getItem(int postion) {
+        if (things == null) {
+            if(list == null) {
+                if (arry == null) {
+                    return null;
+                }
+                return arry[postion];
+            }
+            return list.get(postion);
+        }
+        return things;
+    }
+
     abstract public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType);
 
     abstract public void OnBindViewHolder(BaseViewHolder holder, int position);
