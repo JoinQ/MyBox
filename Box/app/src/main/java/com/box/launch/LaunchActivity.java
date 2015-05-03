@@ -14,4 +14,6 @@ public class LaunchActivity extends BoxActivity{
         startActivity(new Intent(this, MainActivity.class));
         finish();
     }
+
+
 }
