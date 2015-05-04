@@ -51,8 +51,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".customer.exress.functionfragment.query.QueryInfoActivity"
-            android:label="@string/title_activity_express_information">
-            </activity>
+            android:label="@string/title_activity_express_information"></activity>
     </application>
 
 </manifest>
