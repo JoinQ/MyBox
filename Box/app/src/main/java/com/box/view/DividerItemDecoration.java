@@ -6,8 +6,12 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
+import android.widget.TextView;
+
+import com.box.box.R;
 
 /**
  * Created by yyx on 2015/05/03 003.
@@ -28,7 +32,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
     public DividerItemDecoration(Context context) {
         mItemSize = (int) TypedValue.applyDimension(mItemSize, TypedValue.COMPLEX_UNIT_DIP, context.getResources().getDisplayMetrics());
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint.setColor(Color.BLUE);
+        mPaint.setColor(Color.WHITE);
          /*设置填充*/
         mPaint.setStyle(Paint.Style.FILL);
     }
@@ -52,8 +56,10 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
             final View child = parent.getChildAt(i);
             RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) child.getLayoutParams();
             final int top = child.getBottom() + layoutParams.bottomMargin;
-            final int bottom = 0 + mItemSize;
+            final int bottom = top;
             canvas.drawRect(left, top, right, bottom, mPaint);
+
+            Log.i("top^^bottom",top+"&&"+bottom);
         }
     }
 
