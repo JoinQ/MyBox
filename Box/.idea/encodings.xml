@@ -5,5 +5,6 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/query/QueryInfoActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/mode/QueryingGThing.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/mode/QueryingSThing.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/widget/MyRecyclerAdapter.java" charset="UTF-8" />
   </component>
 </project>

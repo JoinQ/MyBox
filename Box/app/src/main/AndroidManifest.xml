@@ -50,8 +50,8 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name=".customer.exress.functionfragment.query.ExpressInformationActivity"
-            android:label="@string/title_activity_express_information">
+            android:name=".customer.exress.functionfragment.query.QueryInfoActivity"
+            android:label="QueryInfoActivity">
             </activity>
     </application>
 
