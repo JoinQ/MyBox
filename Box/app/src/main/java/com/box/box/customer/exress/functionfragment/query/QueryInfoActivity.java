@@ -24,6 +24,7 @@ public class QueryInfoActivity extends BoxActivity {
 
         ActionBar actionBar = this.getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setTitle("物流信息");
         init();
     }

@@ -20,5 +20,6 @@
     <string name="title_activity_express_information">ExpressInformationActivity</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_arrived_not_receive">ArrivedNotReceiveActivity</string>
 
 </resources>

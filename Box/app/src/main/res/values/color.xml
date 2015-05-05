@@ -11,5 +11,9 @@
     <color name="backgroud">#e5e7ed</color>
     <color name="grayBg_deep">#dedbdb</color>
 
-    <color name="express_information_backgrounf">#ebebeb</color>
+    <color name="express_information_background">#ebebeb</color>
+
+    <color name="arrived_card_background">#f2f2f2</color>
+    <color name="arrived_card_font">#6f6f6f</color>
+    <color name="arrived_card_password">#e7211b</color>
 </resources>
