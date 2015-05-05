@@ -1,6 +1,7 @@
 package com.box.box.customer.exress.functionfragment.arrive;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -58,6 +59,8 @@ public class ArrivedFragment extends Fragment {
         adapter.setOnRecyclerOnClickListener(new MyRecyclerAdapter.OnRecyclerItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
+                startActivity(new Intent(ArrivedFragment.this.getActivity()
+                        , ArrivedNotReceiveActivity.class));
                 if (position == 1) {
                     Utils.Toast("cao");
                 } else {

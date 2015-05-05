@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.box.box">
+    package="com.box.box" >
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -28,11 +28,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/MainTheme">
+        android:theme="@style/MainTheme" >
         <activity
             android:name="com.box.launch.LaunchActivity"
             android:label="@string/app_name"
-            android:theme="@style/launchTheme">
+            android:theme="@style/launchTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,7 +51,12 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".customer.exress.functionfragment.query.QueryInfoActivity"
-            android:label="@string/title_activity_express_information"></activity>
+            android:label="@string/title_activity_express_information" >
+        </activity>
+        <activity
+            android:name=".customer.exress.functionfragment.arrive.ArrivedNotReceiveActivity"
+            android:label="@string/title_activity_arrived_not_receive" >
+        </activity>
     </application>
 
 </manifest>

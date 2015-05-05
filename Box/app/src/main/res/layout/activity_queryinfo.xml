@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="96dp"
-        android:background="@color/express_information_backgrounf"
+        android:background="@color/express_information_background"
         android:orientation="vertical"
         android:padding="16dp">
 
