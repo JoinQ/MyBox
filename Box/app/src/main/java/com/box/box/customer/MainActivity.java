@@ -16,6 +16,7 @@ import com.box.box.customer.market.MarketFragment;
 import com.box.box.customer.me.MeFragmnet;
 import com.box.launch.LoginActivity;
 import com.box.view.Tab;
+import com.umeng.update.UmengUpdateAgent;
 
 public class MainActivity extends BoxActivity implements View.OnClickListener {
     private FragmentManager mFm;
@@ -36,11 +37,16 @@ public class MainActivity extends BoxActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initUmeng();
         initData();
         initView();
 
         mFragment = mExpressFragment;
         mFm.beginTransaction().add(R.id.container, mFragment, "express").commit();
+    }
+
+    private void initUmeng() {
+        UmengUpdateAgent.update(this);
     }
 
     private void initData() {

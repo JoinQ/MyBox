@@ -5,14 +5,25 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 
 import com.box.util.Utils;
-import com.umeng.update.UmengUpdateAgent;
+import com.umeng.analytics.MobclickAgent;
 
 public class BoxActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        UmengUpdateAgent.update(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     public boolean dispatchTouchEvent(MotionEvent ev) {
