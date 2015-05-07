@@ -17,7 +17,6 @@ import com.box.box.customer.me.MeFragmnet;
 import com.box.launch.LoginActivity;
 import com.box.view.Tab;
 
-
 public class MainActivity extends BoxActivity implements View.OnClickListener {
     private FragmentManager mFm;
     private Fragment mFragment;
@@ -37,7 +36,6 @@ public class MainActivity extends BoxActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initData();
         initView();
 

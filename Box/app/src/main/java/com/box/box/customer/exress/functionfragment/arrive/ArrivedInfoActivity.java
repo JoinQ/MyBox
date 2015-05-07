@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import com.box.app.BoxActivity;
 import com.box.box.R;
 
-public class ArrivedNotReceiveActivity extends BoxActivity {
+public class ArrivedInfoActivity extends BoxActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

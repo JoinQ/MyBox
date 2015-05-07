@@ -5,7 +5,7 @@
     android:background="@android:color/white"
     android:padding="16dp"
     android:orientation="vertical"
-    tools:context="com.box.box.customer.exress.functionfragment.arrive.ArrivedNotReceiveActivity">
+    tools:context="com.box.box.customer.exress.functionfragment.arrive.ArrivedInfoActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

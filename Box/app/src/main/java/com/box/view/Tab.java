@@ -35,7 +35,7 @@ public class Tab extends RelativeLayout {
 	}
 
 	private void initView(Context context) {
-		View view = LayoutInflater.from(context).inflate(R.layout.tab, this,
+		View view = LayoutInflater.from(context).inflate(R.layout.view_tab, this,
 				false);
 		mTabImageView = (ImageView) view.findViewById(R.id.tab_img);
 		mTabTextView = (TextView) view.findViewById(R.id.tab_text);

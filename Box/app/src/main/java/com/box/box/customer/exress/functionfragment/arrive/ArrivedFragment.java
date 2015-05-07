@@ -60,7 +60,7 @@ public class ArrivedFragment extends Fragment {
             @Override
             public void onItemClick(View v, int position) {
                 startActivity(new Intent(ArrivedFragment.this.getActivity()
-                        , ArrivedNotReceiveActivity.class));
+                        , ArrivedInfoActivity.class));
                 if (position == 1) {
                     Utils.Toast("cao");
                 } else {
