@@ -24,5 +24,6 @@ public class CourierMeFragment extends Fragment {
 			Bundle savedInstanceState) {
 		View root = inflater.inflate(R.layout.fragment_courier_me, container, false);
 		return root;
+
 	}
 }
