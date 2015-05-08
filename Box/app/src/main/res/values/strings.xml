@@ -20,5 +20,9 @@
     <string name="title_activity_express_information">QueryInfoActivity</string>
 
     <string name="title_activity_arrived_not_receive">ArrivedNotReceiveActivity</string>
+    <string name="title_activity_courier_main">CourierMainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
