@@ -1,8 +1,8 @@
 package com.box.box.customer.exress.functionfragment.sendme;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
@@ -29,6 +29,7 @@ public class SendMeFragment extends Fragment {
     private SendMeRecyclerAdapter adapter;
 
     private View root;
+    private LinearLayout headerView;
     private boolean isFirst = true;
 
     @Override
@@ -50,6 +51,7 @@ public class SendMeFragment extends Fragment {
     }
 
     private void initView(View v) {
+        headerView = ((LinearLayout) root.findViewById(R.id.sendme_header));
         recyclerView = (SuperRecyclerView) v.findViewById(R.id.sendme_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
@@ -82,9 +84,9 @@ public class SendMeFragment extends Fragment {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ((LinearLayout) root.findViewById(R.id.sendme_header)).addView(LayoutInflater.from(getActivity()).inflate(R.layout.header_sendme, null));
                     SendMeFragment.this.getView().startAnimation(getAlphaAnimation());
                     initView(root);
+                    headerView.setVisibility(View.VISIBLE);
                 }
             }, 300);
         }
@@ -97,7 +99,11 @@ public class SendMeFragment extends Fragment {
         animation.setDuration(300);
         animation.setFillAfter(true);
         animationSet.addAnimation(animation);
-        return  animationSet;
+        return animationSet;
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }

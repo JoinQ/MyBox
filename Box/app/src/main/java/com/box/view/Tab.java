@@ -48,13 +48,13 @@ public class Tab extends RelativeLayout {
 		addView(view);
 	}
 
-	public void initTab(int imgIdSelect, int imgIdNoSelect, String text) {
+	public void initTab(int imgIdSelect, int imgIdNoSelect, int tab_select, int tab_noselect, String text) {
 		mTabTextView.setText(text);
-		mTabTextView.setTextColor(getResources().getColor(R.color.tab_select));
+		mTabTextView.setTextColor(getResources().getColor(tab_select));
 		mTabImageView.setImageResource(imgIdSelect);
 		
 		mTabDefaultTextView.setText(text);
-		mTabDefaultTextView.setTextColor(getResources().getColor(R.color.tab_noselect));
+		mTabDefaultTextView.setTextColor(getResources().getColor(tab_noselect));
 		mTabDefaultImageView.setImageResource(imgIdNoSelect);
 	}
 

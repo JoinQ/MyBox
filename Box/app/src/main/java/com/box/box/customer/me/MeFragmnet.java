@@ -1,8 +1,9 @@
 package com.box.box.customer.me;
 
 import android.app.ActionBar;
-import android.app.Fragment;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -90,5 +91,10 @@ public class MeFragmnet extends Fragment implements View.OnClickListener{
 			case R.id.me_tab_set:
 				break;
 		}
+	}
+
+	@Override
+	public void onDestroy() {
+		super.onDestroy();
 	}
 }

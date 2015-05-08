@@ -1,9 +1,9 @@
 package com.box.box.customer.exress;
 
 import android.app.ActionBar;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -66,7 +66,7 @@ public class ExpressFragmnet extends Fragment implements View.OnClickListener {
     }
 
     private void initFragment() {
-        fm = getFragmentManager();
+        fm = getActivity().getSupportFragmentManager();
         mArrivedFragment = new ArrivedFragment();
         mQueryFragment = new QueryFragment();
         mSendMeFragment = new SendMeFragment();
@@ -200,6 +200,6 @@ public class ExpressFragmnet extends Fragment implements View.OnClickListener {
             container.addView(fragment.getView());
             return fragment;
         }
-
     }
+
 }

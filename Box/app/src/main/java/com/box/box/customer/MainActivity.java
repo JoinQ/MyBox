@@ -1,9 +1,9 @@
 package com.box.box.customer;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -50,7 +50,7 @@ public class MainActivity extends BoxActivity implements View.OnClickListener {
     }
 
     private void initData() {
-        mFm = getFragmentManager();
+        mFm = getSupportFragmentManager();
         mExpressFragment = new ExpressFragmnet();
         mMarketFragment = new MarketFragment();
         mMeFragmnet = new MeFragmnet();
@@ -61,9 +61,9 @@ public class MainActivity extends BoxActivity implements View.OnClickListener {
         tabMarket = (Tab) findViewById(R.id.tab_maket);
         tabMe = (Tab) findViewById(R.id.tab_me);
 
-        tabExpress.initTab(R.drawable.tab_express, R.drawable.tab_express_no, "我的快递");
-        tabMarket.initTab(R.drawable.tab_market, R.drawable.tab_market_no, "购物市场");
-        tabMe.initTab(R.drawable.tab_me, R.drawable.tab_me_no, "个人中心");
+        tabExpress.initTab(R.drawable.tab_express, R.drawable.tab_express_no, R.color.actionbarColor, R.color.tab_noselect, "我的快递");
+        tabMarket.initTab(R.drawable.tab_market, R.drawable.tab_market_no, R.color.actionbarColor, R.color.tab_noselect, "购物市场");
+        tabMe.initTab(R.drawable.tab_me, R.drawable.tab_me_no, R.color.actionbarColor, R.color.tab_noselect, "个人中心");
 
         tabExpress.setViewSelect();
         tabMarket.setViewNoSelect();

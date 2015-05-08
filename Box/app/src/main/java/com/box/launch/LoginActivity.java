@@ -1,18 +1,22 @@
 package com.box.launch;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.box.app.BoxActivity;
 import com.box.box.R;
+import com.box.box.courier.CourierMainActivity;
 import com.box.box.customer.MainActivity;
 
 import java.util.HashMap;
@@ -33,6 +37,8 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
     private ImageView login_iv_head;
     private LinearLayout login_return;
 
+    private FrameLayout frameLayoutBg;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +47,7 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
     }
 
     private void initView() {
+        frameLayoutBg = (FrameLayout) findViewById(R.id.login_frame);
         login_return = (LinearLayout) findViewById(R.id.login_ll_return);
         login_bt_login = (Button) findViewById(R.id.login_bt_login);
         login_et_id = (EditText) findViewById(R.id.login_et_id);
@@ -72,7 +79,7 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
 //                } else if (login_et_password.getText().toString() == null || login_et_password.getText().toString().length() == 0) {
 //                    Utils.Toast("密码不能为空");
 //                }
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                startActivity(new Intent(LoginActivity.this, CourierMainActivity.class));
                 finish();
                 break;
             case R.id.login_tv_register:
@@ -121,7 +128,6 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        login_iv_head.destroyDrawingCache();
     }
 
 }

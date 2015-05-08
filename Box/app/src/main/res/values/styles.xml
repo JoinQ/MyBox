@@ -9,8 +9,17 @@
         <item name="android:actionBarStyle">@style/ActionBarStyle</item>
     </style>
 
+    <style name="CourierMainTheme" parent="android:Theme.Holo">
+        <item name="android:actionBarStyle">@style/CourierActionBarStyle</item>
+    </style>
+
     <style name="ActionBarStyle" parent="android:Widget.ActionBar">
         <item name="android:background">@color/actionbarColor</item>
+        <item name="android:titleTextStyle">@style/AcBar_titleStyle</item>
+    </style>
+
+    <style name="CourierActionBarStyle" parent="android:Widget.ActionBar">
+        <item name="android:background">@color/courierActionbarColor</item>
         <item name="android:titleTextStyle">@style/AcBar_titleStyle</item>
     </style>
 

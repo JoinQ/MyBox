@@ -1,10 +1,7 @@
 package com.box.app;
 
 import android.app.Application;
-
 import com.box.util.Utils;
-import com.umeng.update.UmengUpdateAgent;
-
 import cn.smssdk.SMSSDK;
 
 public class MyApplication extends Application {

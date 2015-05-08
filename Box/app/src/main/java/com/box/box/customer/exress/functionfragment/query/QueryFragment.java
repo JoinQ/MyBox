@@ -1,9 +1,9 @@
 package com.box.box.customer.exress.functionfragment.query;
 
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
@@ -26,6 +26,7 @@ public class QueryFragment extends Fragment {
     private SuperRecyclerView recyclerView;
     private Things things;
     private QueryRecyclerAdapter adapter;
+    private LinearLayout queryBg;
 
     private View root;
     private boolean isFirst = true;
@@ -49,6 +50,7 @@ public class QueryFragment extends Fragment {
     }
 
     private void initView(View v) {
+        queryBg = (LinearLayout) v.findViewById(R.id.query_header);
         recyclerView = (SuperRecyclerView) v.findViewById(R.id.query_recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
@@ -82,9 +84,9 @@ public class QueryFragment extends Fragment {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    ((LinearLayout) root.findViewById(R.id.query_header)).addView(LayoutInflater.from(getActivity()).inflate(R.layout.header_query, null, false));
                     QueryFragment.this.getView().startAnimation(getAlphaAnimation());
                     initView(root);
+                    queryBg.setVisibility(View.VISIBLE);
                 }
             }, 300);
         }
