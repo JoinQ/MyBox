@@ -54,6 +54,7 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
         login_bt_login.setOnClickListener(this); //登陆
         login_tv_register.setOnClickListener(this); //忘记密码
         login_tv_forget.setOnClickListener(this); //注册
+        login_return.destroyDrawingCache();
     }
 
     @Override
