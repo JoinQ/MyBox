@@ -137,14 +137,14 @@
                     android:cursorVisible="true"
                     android:hint="请输入密码"></EditText>
 
-                <CheckBox
-                    android:id="@+id/login_cb_remember"
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:background="@drawable/login_checkbox_shape"
-                    android:button="@null"
-                    android:checked="true"
-                    android:layout_gravity="right|center_vertical" />
+                    <CheckBox
+                        android:id="@+id/login_cb_remember"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/login_checkbox_shape"
+                        android:button="@null"
+                        android:checked="true"
+                        android:layout_gravity="right|center_vertical" />
             </FrameLayout>
 
 
