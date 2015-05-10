@@ -17,6 +17,8 @@
 
     <string name="recycleradapter_state">详情：%1$s</string>
     <string name="recycleradapter_pinglun">评论：%1$s</string>
+    <string name="recycleradapter_receiver">收件人：%1$s(%2$s)</string>
+
     <string name="title_activity_express_information">QueryInfoActivity</string>
 
     <string name="title_activity_arrived_not_receive">ArrivedNotReceiveActivity</string>

@@ -19,14 +19,11 @@ import com.box.box.customer.exress.functionfragment.query.QueryFragment;
 import com.box.box.customer.exress.functionfragment.sendme.SendMeFragment;
 import com.box.util.Utils;
 
-import java.util.List;
-
 public class ExpressFragmnet extends Fragment implements View.OnClickListener {
     private FragmentManager fm;
     private ArrivedFragment mArrivedFragment;
     private QueryFragment mQueryFragment;
     private SendMeFragment mSendMeFragment;
-    private List<View> view;
 
     private TextView mArrivedText;
     private TextView mSendMeText;

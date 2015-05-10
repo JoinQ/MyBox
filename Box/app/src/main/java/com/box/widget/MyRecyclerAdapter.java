@@ -5,6 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import com.box.mode.Things;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> implements View.OnClickListener {
@@ -12,7 +15,6 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
 
     private List<T> list;
     private T things;
-    private T[] arry;
     private Context context;
 
     public MyRecyclerAdapter(T things, Context context) {
@@ -25,14 +27,13 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
     }
 
     public MyRecyclerAdapter(T[] arry, Context context) {
-        this.arry = arry;
+        list = new ArrayList<T>(Arrays.asList(arry));
         this.context = context;
     }
 
     public void clear() {
         things = null;
-        list = null;
-        arry = null;
+        list.clear();
         notifyDataSetChanged();
     }
 
@@ -41,13 +42,18 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
         notifyDataSetChanged();
     }
 
+    public void add(T[] arry) {
+        if (arry != null) {
+            List list2 = new ArrayList<T>(Arrays.asList(arry));
+            list.addAll(list2);
+        }
+        notifyDataSetChanged();
+    }
+
     public T getItem(int postion) {
         if (things == null) {
             if(list == null) {
-                if (arry == null) {
-                    return null;
-                }
-                return arry[postion];
+                return null;
             }
             return list.get(postion);
         }
@@ -87,11 +93,7 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
             return adCount + aingCount;
         } else {
             if (list == null) {
-                if (arry == null) {
-                    return 0;
-                } else {
-                    return arry.length;
-                }
+                return 0;
             }
             return list.size();
         }

@@ -25,13 +25,10 @@ public class QueryInfoViewHolder extends BaseViewHolder<QueryInfoThing, NullPoin
     public void setFirstData(QueryInfoThing data, boolean isFirst) {
         super.setFirstData(data, isFirst);
 
-        if (isFirst)
-        {
+        if (isFirst) {
             mQFTextState.setTextColor(Color.BLACK);
             mQFTextTime.setTextColor(Color.BLACK);
-        }
-        else
-        {
+        } else {
             mQFTextState.setTextColor(Color.GRAY);
             mQFTextTime.setTextColor(Color.GRAY);
         }
