@@ -17,4 +17,6 @@
     <color name="arrived_card_background">#f2f2f2</color>
     <color name="arrived_card_font">#6f6f6f</color>
     <color name="arrived_card_password">#e7211b</color>
+
+    <color name="courier_search_spinner_background">#f6f6f6</color>
 </resources>

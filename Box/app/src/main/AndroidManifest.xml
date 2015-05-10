@@ -57,9 +57,9 @@
             android:name=".customer.exress.functionfragment.arrive.ArrivedInfoActivity"
             android:label="ArrivedInfoActivity" />
         <activity
-            android:theme="@style/CourierMainTheme"
             android:name=".courier.CourierMainActivity"
-            android:label="DeliverMainActivity"/>
+            android:label="DeliverMainActivity"
+            android:theme="@style/CourierMainTheme" />
 
         <!-- ###################注册SDK使用的Activity###################### -->
         <!-- 分享编辑页 -->
@@ -105,6 +105,11 @@
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="Channel ID" />
+
+        <activity
+            android:name=".customer.exress.functionfragment.arrive.ArrivingInfoActivity"
+            android:label="@string/title_activity_arriving_info" >
+        </activity>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,10 @@ public class ArrivedFragment extends Fragment {
     private Things things;
     private ArriveRecyclerAdapter adapter;
 
+    private int arrivedThingslength = 0;
+    private int arrivingThingslength = 0;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +35,9 @@ public class ArrivedFragment extends Fragment {
                 new ArrivedThing("3", R.drawable.coporation2, "中通", "12345678901", "2015-04-24 3:00pm", "景苑7栋1单元10号柜子")};
         ArrivingThing[] arrivingThings = {new ArrivingThing("2", R.drawable.coporation1, "顺风", "1234567980", "2015-04-24 1:00pm", "非常好啊！"),
                 new ArrivingThing("2", R.drawable.coporation2, "中通", "1234567980", "2015-04-24 2:00pm", "真垃圾！")};
+
+        arrivedThingslength = arrivedThings.length;
+        arrivingThingslength = arrivingThings.length;
         things = new Things<ArrivedThing, ArrivingThing>(arrivedThings, arrivingThings);
         adapter = new ArriveRecyclerAdapter(things, getActivity());
     }
@@ -59,8 +67,14 @@ public class ArrivedFragment extends Fragment {
         adapter.setOnRecyclerOnClickListener(new MyRecyclerAdapter.OnRecyclerItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
-                startActivity(new Intent(ArrivedFragment.this.getActivity()
-                        , ArrivedInfoActivity.class));
+
+                if ((position+1) <= arrivedThingslength)
+                    startActivity(new Intent(ArrivedFragment.this.getActivity()
+                            , ArrivedInfoActivity.class));
+                else
+                    startActivity(new Intent(ArrivedFragment.this.getActivity()
+                            , ArrivingInfoActivity.class));
+
                 if (position == 1) {
                     Utils.Toast("cao");
                 } else {
