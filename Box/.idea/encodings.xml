@@ -2,7 +2,6 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/app/BoxActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/courier/order/functionfragment/sd.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/query/QueryFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/query/QueryInfoActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/me/function/ShareDialogFragment.java" charset="UTF-8" />

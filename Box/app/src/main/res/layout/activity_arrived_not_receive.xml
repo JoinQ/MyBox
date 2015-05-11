@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,189 +9,130 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="144dp"
-        android:background="@drawable/arrvied_not_recevie_layout_shape"
-        android:padding="3px"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@color/arrived_card_background"
-            android:padding="8dp">
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="提货一维码"
-                android:textSize="16sp"
-                android:textColor="@color/arrived_card_font"
-                android:layout_gravity="center_vertical" />
+                android:textColor="@android:color/black"
+                android:text="快递公司:" />
+
+            <TextView
+                android:id="@+id/arr_not_rec_tv_courier_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="顺丰速运" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="请在取货时出示此一维码"
-                android:textSize="8sp"
-                android:textColor="@color/arrived_card_font"
-                android:layout_gravity="center_vertical|right" />
-        </FrameLayout>
+                android:textColor="@android:color/black"
+                android:text="订单号:" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3px"
-            android:background="@color/arrived_card_font" />
+            <TextView
+                android:id="@+id/arr_not_rec_tv_order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="123456789111" />
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/arr_not_re_iv_ywm"
-            android:padding="2dp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="96dp"
-            android:src="@drawable/arrived_ywm" />
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="快递员:" />
+
+            <TextView
+                android:id="@+id/arr_not_rec_tv_courier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="12345678900" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="到货时间:" />
+
+            <TextView
+                android:id="@+id/arr_not_rec_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="2015-04-24 14：00" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="取货地址:" />
+
+            <TextView
+                android:id="@+id/arr_not_rec_tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="渝北XX小区2栋楼下XX柜5号" />
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="24dp"
-        android:padding="3px"
-        android:orientation="vertical"
-        android:background="@drawable/arrvied_not_recevie_layout_shape">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
 
-        <FrameLayout
+        <ImageView
+            android:id="@+id/arr_not_rec_iv_ywm"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@color/arrived_card_background"
-            android:padding="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="货物信息"
-                android:textSize="16sp"
-                android:textColor="@color/arrived_card_font"
-                android:layout_gravity="center_vertical" />
-
-        </FrameLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3px"
-            android:background="@color/arrived_card_font" />
-
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrived_ywm" />
 
         <TextView
-            android:id="@+id/arr_not_re_tv_query"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="顺丰 123456789111"
-            android:paddingLeft="8dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="4dp"
-            android:textColor="@color/arrived_card_font" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="12dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="快递员："
-                android:textColor="@color/arrived_card_font" />
-
-            <TextView
-                android:id="@+id/arr_not_re_tv_courier"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12345678900"
-                android:textColor="@color/arrived_card_font" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="12dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="时间："
-                android:textColor="@color/arrived_card_font" />
-
-            <TextView
-                android:id="@+id/arr_not_re_tv_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2015-04-24 2:00pm"
-                android:textColor="@color/arrived_card_font" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="12dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="地址："
-                android:textColor="@color/arrived_card_font" />
-
-            <TextView
-                android:id="@+id/arr_not_re_tv_address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="渝北XX小区2栋楼下XX柜5号"
-                android:textColor="@color/arrived_card_font" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="12dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="取件密码："
-                android:textColor="@color/arrived_card_font" />
-
-            <TextView
-                android:id="@+id/arr_not_re_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="123456"
-                android:textColor="@color/arrived_card_password" />
-        </LinearLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/arr_not_re_bt_receive"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginRight="36dp"
-                android:layout_marginTop="12dp"
-                android:layout_gravity="center_vertical"
-                android:background="@drawable/arrvied_not_receive_button_shape"
-                android:textColor="@android:color/white"
-                android:text="立即取件"/>
-        </FrameLayout>
-
+            android:layout_gravity="center"
+            android:text="请扫描此条形码" />
     </LinearLayout>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/arr_not_rec_tv_exception"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/arrived_not_rec_exception"
+        android:layout_gravity="bottom|right"
+        android:textColor="@color/arrived_card_password" />
+
+</FrameLayout>

@@ -29,6 +29,7 @@
     <string name="title_activity_text">text</string>
     <string name="title_activity_arriving_info">ArrivingInfoActivity</string>
 
+    <string name="arrived_not_rec_exception"><u>取件异常?</u></string>
 
 
 </resources>
