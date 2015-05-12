@@ -17,6 +17,8 @@ import com.box.box.R;
 import com.box.box.customer.me.function.MyInformationActivity;
 import com.box.box.customer.me.function.ShareDialogFragment;
 import com.box.mode.MeList;
+import com.box.util.Utils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -85,6 +87,9 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
     @Override
     public void onDestroy() {
         super.onDestroy();
+        if (list != null) {
+            list.clear();
+        }
     }
 
     class MyAdapter extends BaseAdapter {
