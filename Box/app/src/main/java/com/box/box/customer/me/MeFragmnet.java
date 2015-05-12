@@ -1,6 +1,7 @@
 package com.box.box.customer.me;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.box.box.R;
+import com.box.box.customer.me.function.MyInformationActivity;
 import com.box.box.customer.me.function.ShareDialogFragment;
 import com.box.util.Utils;
 
@@ -71,6 +73,7 @@ public class MeFragmnet extends Fragment implements View.OnClickListener{
 			case R.id.me_sign:
 				break;
 			case R.id.me_tab_myinfo:
+                startActivity(new Intent(MeFragmnet.this.getActivity(), MyInformationActivity.class));
 				break;
 			case R.id.me_tab_reward:
 				break;
