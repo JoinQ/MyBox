@@ -110,6 +110,10 @@
             android:name=".customer.exress.functionfragment.arrive.ArrivingInfoActivity"
             android:label="@string/title_activity_arriving_info" >
         </activity>
+        <activity
+            android:name=".customer.me.function.MyInformationActivity"
+            android:label="@string/title_activity_my_information" >
+        </activity>
     </application>
 
 </manifest>

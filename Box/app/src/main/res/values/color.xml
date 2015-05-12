@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
     <color name="toptabtext_active">#ff4d4d</color>
     <color name="toptabtext_release">#000000</color>
 
