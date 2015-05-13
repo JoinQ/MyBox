@@ -20,4 +20,6 @@
     <color name="arrived_card_password">#e7211b</color>
 
     <color name="courier_search_spinner_background">#f6f6f6</color>
+
+    <color name="my_info_view">#cfcfcf</color>
 </resources>
