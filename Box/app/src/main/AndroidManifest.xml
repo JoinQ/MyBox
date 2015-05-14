@@ -114,6 +114,10 @@
             android:name=".customer.me.function.MyInformationActivity"
             android:label="@string/title_activity_my_information" >
         </activity>
+        <activity
+            android:name=".customer.me.function.HelpActivity"
+            android:label="@string/title_activity_help" >
+        </activity>
     </application>
 
 </manifest>

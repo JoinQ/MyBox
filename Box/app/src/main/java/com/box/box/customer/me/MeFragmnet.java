@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.box.box.R;
+import com.box.box.customer.me.function.HelpActivity;
 import com.box.box.customer.me.function.MyInformationActivity;
 import com.box.box.customer.me.function.ShareDialogFragment;
 import com.box.mode.MeList;
@@ -76,6 +77,7 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
                 new ShareDialogFragment().show(getActivity().getFragmentManager(), "share");
                 break;
             case 4:
+                startActivity(new Intent(MeFragmnet.this.getActivity(), HelpActivity.class));
                 break;
             case 5:
                 break;
