@@ -7,6 +7,7 @@
     tools:context="com.box.box.customer.me.function.HelpActivity">
 
     <FrameLayout
+        android:id="@+id/help_fl_guide"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
@@ -36,6 +37,7 @@
         android:orientation="vertical">
 
         <FrameLayout
+            android:id="@+id/help_fl_feedback"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:paddingLeft="16dp"
@@ -62,6 +64,7 @@
             android:layout_height="1dp"
             android:background="@color/my_info_view" />
         <FrameLayout
+            android:id="@+id/help_fl_news"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:paddingLeft="16dp"
