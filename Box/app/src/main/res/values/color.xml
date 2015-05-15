@@ -22,4 +22,7 @@
     <color name="courier_search_spinner_background">#f6f6f6</color>
 
     <color name="my_info_view">#cfcfcf</color>
+
+    <color name="rank_my_background">#888888</color>
+    <color name="rank_my_font">#fcff00</color>
 </resources>

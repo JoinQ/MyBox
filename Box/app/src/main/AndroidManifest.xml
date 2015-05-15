@@ -118,6 +118,10 @@
             android:name=".customer.me.function.HelpActivity"
             android:label="@string/title_activity_help" >
         </activity>
+        <activity
+            android:name=".customer.me.function.RankActivity"
+            android:label="@string/title_activity_rank" >
+        </activity>
     </application>
 
 </manifest>
