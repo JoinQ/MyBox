@@ -45,7 +45,6 @@ public class RankActivity extends BoxActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(RankActivity.this));
 
         adapter = new RankRecyclerAdapter(rankthing, this);
-
         recyclerView.addItemDecoration(new DividerItemDecoration(this));
         recyclerView.setAdapter(adapter);
     }
