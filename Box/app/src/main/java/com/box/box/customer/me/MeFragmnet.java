@@ -14,12 +14,10 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.box.box.R;
-import com.box.box.customer.me.function.HelpActivity;
 import com.box.box.customer.me.function.MyInformationActivity;
 import com.box.box.customer.me.function.RankActivity;
 import com.box.box.customer.me.function.ShareDialogFragment;
 import com.box.mode.MeList;
-import com.box.util.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,8 +34,7 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
         list.add(new MeList(R.drawable.me_logistics, "我的物流", true));
         list.add(new MeList(R.drawable.me_application, "应用中心", false));
         list.add(new MeList(R.drawable.me_share, "向好友推荐", false));
-        list.add(new MeList(R.drawable.me_help, "帮助", true));
-        list.add(new MeList(R.drawable.me_rank, "排名", false));
+        list.add(new MeList(R.drawable.me_rank, "排名", true));
         list.add(new MeList(R.drawable.me_set, "设置", false));
         ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayShowHomeEnabled(false);
@@ -78,12 +75,9 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
                 new ShareDialogFragment().show(getActivity().getFragmentManager(), "share");
                 break;
             case 4:
-                startActivity(new Intent(MeFragmnet.this.getActivity(), HelpActivity.class));
-                break;
-            case 5:
                 startActivity(new Intent(MeFragmnet.this.getActivity(), RankActivity.class));
                 break;
-            case 6:
+            case 5:
                 break;
         }
     }

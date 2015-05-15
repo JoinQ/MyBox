@@ -18,7 +18,7 @@ public class QueryInfoRecyclerAdapter extends MyRecyclerAdapter<QueryInfoThing> 
 
     @Override
     public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
-        myViewHolder = new RankRecyclerAdapter.QueryInfoViewHolder(parent);
+        myViewHolder = new QueryInfoViewHolder(parent);
         return myViewHolder;
     }
 
