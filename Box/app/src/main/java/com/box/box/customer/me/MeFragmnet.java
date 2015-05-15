@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -13,11 +14,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.box.box.R;
+import com.box.box.customer.exress.functionfragment.query.QueryInfoActivity;
 import com.box.box.customer.me.function.MyInformationActivity;
 import com.box.box.customer.me.function.RankActivity;
+import com.box.box.customer.me.function.SettingActivity;
 import com.box.box.customer.me.function.ShareDialogFragment;
-import com.box.mode.MeList;
+import com.box.mode.MeListThing;
+import com.box.util.Utils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,17 +30,17 @@ import java.util.List;
 public class MeFragmnet extends Fragment implements View.OnClickListener, ListView.OnItemClickListener {
     private ListView listView;
 
-    private List<MeList> list = new ArrayList<MeList>();
+    private List<MeListThing> list = new ArrayList<MeListThing>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        list.add(new MeList(R.drawable.me_info, "个人信息", true));
-        list.add(new MeList(R.drawable.me_logistics, "我的物流", true));
-        list.add(new MeList(R.drawable.me_application, "应用中心", false));
-        list.add(new MeList(R.drawable.me_share, "向好友推荐", false));
-        list.add(new MeList(R.drawable.me_rank, "排名", true));
-        list.add(new MeList(R.drawable.me_set, "设置", false));
+        list.add(new MeListThing(R.drawable.me_info, "个人信息", true));
+        list.add(new MeListThing(R.drawable.me_logistics, "我的物流", true));
+        list.add(new MeListThing(R.drawable.me_application, "应用中心", false));
+        list.add(new MeListThing(R.drawable.me_share, "向好友推荐", false));
+        list.add(new MeListThing(R.drawable.me_rank, "排名", true));
+        list.add(new MeListThing(R.drawable.me_set, "设置", false));
         ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayShowHomeEnabled(false);
         actionBar.setTitle("个人中心");
@@ -63,22 +68,26 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        switch (i) {
-            case 0:
-                startActivity(new Intent(MeFragmnet.this.getActivity(), MyInformationActivity.class));
-                break;
-            case 1:
-                break;
-            case 2:
-                break;
-            case 3:
-                new ShareDialogFragment().show(getActivity().getFragmentManager(), "share");
-                break;
-            case 4:
-                startActivity(new Intent(MeFragmnet.this.getActivity(), RankActivity.class));
-                break;
-            case 5:
-                break;
+        if (!Utils.QuickClick.isQuickClick()) {
+            switch (i) {
+                case 0:
+                    startActivity(new Intent(MeFragmnet.this.getActivity(), MyInformationActivity.class));
+                    break;
+                case 1:
+                    startActivity(new Intent(MeFragmnet.this.getActivity(), QueryInfoActivity.class));
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    new ShareDialogFragment().show(getActivity().getFragmentManager(), "share");
+                    break;
+                case 4:
+                    startActivity(new Intent(MeFragmnet.this.getActivity(), RankActivity.class));
+                    break;
+                case 5:
+                    startActivity(new Intent(MeFragmnet.this.getActivity(), SettingActivity.class));
+                    break;
+            }
         }
     }
 
@@ -91,10 +100,10 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
     }
 
     class MyAdapter extends BaseAdapter {
-        private List<MeList> meList;
+        private List<MeListThing> meList;
         private Context context;
 
-        public MyAdapter(List<MeList> meList, Context context) {
+        public MyAdapter(List<MeListThing> meList, Context context) {
             this.meList = meList;
             this.context = context;
         }

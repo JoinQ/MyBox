@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.box.box" >
+    package="com.box.box">
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -29,11 +29,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/MainTheme" >
+        android:theme="@style/MainTheme">
         <activity
             android:name="com.box.launch.LaunchActivity"
             android:label="@string/app_name"
-            android:theme="@style/launchTheme" >
+            android:theme="@style/launchTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -61,6 +61,20 @@
             android:label="DeliverMainActivity"
             android:theme="@style/CourierMainTheme" />
 
+        <activity
+            android:name=".customer.exress.functionfragment.arrive.ArrivingInfoActivity"
+            android:label="@string/title_activity_arriving_info"></activity>
+        <activity
+            android:name=".customer.me.function.MyInformationActivity"
+            android:label="@string/title_activity_my_information"></activity>
+        <activity
+            android:name=".customer.me.function.RankActivity"
+            android:label="@string/title_activity_rank"></activity>
+        <activity
+            android:name=".customer.me.function.SettingActivity"
+            android:label="@string/title_activity_setting">>
+        </activity>
+
         <!-- ###################注册SDK使用的Activity###################### -->
         <!-- 分享编辑页 -->
         <activity
@@ -75,7 +89,7 @@
         <activity
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
-            android:noHistory="true" >
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -106,18 +120,6 @@
             android:name="UMENG_CHANNEL"
             android:value="Channel ID" />
 
-        <activity
-            android:name=".customer.exress.functionfragment.arrive.ArrivingInfoActivity"
-            android:label="@string/title_activity_arriving_info" >
-        </activity>
-        <activity
-            android:name=".customer.me.function.MyInformationActivity"
-            android:label="@string/title_activity_my_information" >
-        </activity>
-        <activity
-            android:name=".customer.me.function.RankActivity"
-            android:label="@string/title_activity_rank" >
-        </activity>
     </application>
 
 </manifest>

@@ -24,21 +24,21 @@
         <com.box.view.Tab
             android:id="@+id/tab_express"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1" />
 
         <com.box.view.Tab
             android:id="@+id/tab_maket"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1" />
 
         <com.box.view.Tab
             android:id="@+id/tab_me"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1" />
     </LinearLayout>

@@ -1,11 +1,11 @@
 package com.box.mode;
 
-public class MeList {
+public class SettingThing {
     private int imageId;
     private String name;
     private Boolean isAppear;
 
-    public MeList(int imageId, String name, Boolean isAppear) {
+    public SettingThing(int imageId, String name, Boolean isAppear) {
         this.imageId = imageId;
         this.isAppear = isAppear;
         this.name = name;

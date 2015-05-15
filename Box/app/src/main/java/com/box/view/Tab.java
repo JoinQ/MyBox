@@ -39,10 +39,10 @@ public class Tab extends RelativeLayout {
 				false);
 		mTabImageView = (ImageView) view.findViewById(R.id.tab_img);
 		mTabTextView = (TextView) view.findViewById(R.id.tab_text);
-		
+
 		mTabDefaultImageView = (ImageView) view.findViewById(R.id.tab_img_default);
 		mTabDefaultTextView = (TextView) view.findViewById(R.id.tab_text_default);
-		
+
 		mTabSelectll = (LinearLayout) view.findViewById(R.id.tab_ll);
 		mTabDefaultSelectll = (LinearLayout) view.findViewById(R.id.tab_default_ll);
 		addView(view);
@@ -52,7 +52,7 @@ public class Tab extends RelativeLayout {
 		mTabTextView.setText(text);
 		mTabTextView.setTextColor(getResources().getColor(tab_select));
 		mTabImageView.setImageResource(imgIdSelect);
-		
+
 		mTabDefaultTextView.setText(text);
 		mTabDefaultTextView.setTextColor(getResources().getColor(tab_noselect));
 		mTabDefaultImageView.setImageResource(imgIdNoSelect);
@@ -64,10 +64,10 @@ public class Tab extends RelativeLayout {
 	}
 
 	public void setViewNoSelect() {
-		mTabSelectll.setVisibility(View.INVISIBLE);
+		mTabSelectll.setVisibility(View.GONE);
 		mTabDefaultSelectll.setAlpha(1);
 	}
-	
+
 	public void setTabAlpha(float args) {
 		mTabSelectll.setAlpha(args);
 		mTabDefaultSelectll.setAlpha(1- args);

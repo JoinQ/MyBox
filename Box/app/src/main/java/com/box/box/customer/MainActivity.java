@@ -15,6 +15,7 @@ import com.box.box.customer.exress.ExpressFragmnet;
 import com.box.box.customer.market.MarketFragment;
 import com.box.box.customer.me.MeFragmnet;
 import com.box.launch.LoginActivity;
+import com.box.util.Utils;
 import com.box.view.Tab;
 import com.umeng.update.UmengUpdateAgent;
 

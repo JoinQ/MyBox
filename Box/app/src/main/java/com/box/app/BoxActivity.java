@@ -26,12 +26,4 @@ public class BoxActivity extends FragmentActivity {
         MobclickAgent.onPause(this);
     }
 
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            if (Utils.QuickClick.isQuickClick()) {
-                return true;
-            }
-        }
-        return super.dispatchTouchEvent(ev);
-    }
 }
