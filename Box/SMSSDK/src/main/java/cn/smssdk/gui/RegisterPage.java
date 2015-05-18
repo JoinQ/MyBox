@@ -63,6 +63,7 @@ public class RegisterPage extends FakeActivity implements OnClickListener,
     private EditText etPhoneNum;
     // 密码
     private EditText etPassword;
+    private EditText etPasswordAgain;
     // 国家编号
     private TextView tvCountryNum;
     // clear 号码
@@ -129,6 +130,7 @@ public class RegisterPage extends FakeActivity implements OnClickListener,
 
             resId = getIdRes(activity, "et_write_phone");
             etPassword = (EditText) activity.findViewById(R.id.et_write_password);
+            etPasswordAgain = (EditText) activity.findViewById(R.id.et_write_password_again);
             etPhoneNum = (EditText) activity.findViewById(resId);
             etPhoneNum.setText("");
             etPhoneNum.addTextChangedListener(this);
@@ -138,7 +140,12 @@ public class RegisterPage extends FakeActivity implements OnClickListener,
             etPassword.addTextChangedListener(this);
             etPassword.requestFocus();
 
-            if (etPhoneNum.getText().length() > 0 && etPassword.getText().length() >= 8) {
+
+            etPasswordAgain.setText("");
+            etPasswordAgain.addTextChangedListener(this);
+            etPasswordAgain.requestFocus();
+
+            if (etPhoneNum.getText().length() > 0 && etPassword.getText().length() >= 8 && etPasswordAgain.getText().length() >= 8) {
                 btnNext.setEnabled(true);
                 resId = getIdRes(activity, "iv_clear");
                 ivClear = (ImageView) activity.findViewById(resId);
@@ -263,7 +270,7 @@ public class RegisterPage extends FakeActivity implements OnClickListener,
     }
 
     public void onTextChanged(CharSequence s, int start, int before, int count) {
-        if (etPhoneNum.length() > 0 && etPassword.length() >= 8) {
+        if (etPhoneNum.getText().length() > 0 && etPasswordAgain.getText().length() >= 8 && etPassword.getText().length() >= 8) {
             btnNext.setEnabled(true);
             ivClear.setVisibility(View.VISIBLE);
             int resId = getBitmapRes(activity, "smssdk_btn_enable");
@@ -301,20 +308,32 @@ public class RegisterPage extends FakeActivity implements OnClickListener,
             countryPage.showForResult(activity, null, this);
         } else if (id == id_btn_next) {
             // 请求发送短信验证码
-            if (countryRules == null || countryRules.size() <= 0) {
-                if (pd != null && pd.isShowing()) {
-                    pd.dismiss();
-                }
-                pd = CommonDialog.ProgressDialog(activity);
-                if (pd != null) {
-                    pd.show();
-                }
-
-                SMSSDK.getSupportedCountries();
+            Log.i("etPassword",etPassword.getText().toString() + "   " + etPasswordAgain.getText().toString());
+            String pass = etPassword.getText().toString();
+            String passAgain = etPasswordAgain.getText().toString();
+            Log.i("pass",pass);
+            Log.i("passAgain",passAgain);
+            if (!pass.equals(passAgain)) {
+                Log.i("不一样","不一样");
+                Toast.makeText(getContext(), "密码不一致", Toast.LENGTH_SHORT).show();
             } else {
-                String phone = etPhoneNum.getText().toString().trim().replaceAll("\\s*", "");
-                String code = tvCountryNum.getText().toString().trim();
-                checkPhoneNum(phone, code);
+                Log.i("一样","一样");
+                if (countryRules == null || countryRules.size() <= 0) {
+                    if (pd != null && pd.isShowing()) {
+                        pd.dismiss();
+                    }
+
+                    pd = CommonDialog.ProgressDialog(activity);
+                    if (pd != null) {
+                        pd.show();
+                    }
+
+                    SMSSDK.getSupportedCountries();
+                } else {
+                    String phone = etPhoneNum.getText().toString().trim().replaceAll("\\s*", "");
+                    String code = tvCountryNum.getText().toString().trim();
+                    checkPhoneNum(phone, code);
+                }
             }
         } else if (id == id_iv_clear) {
             // 清除电话号码输入框

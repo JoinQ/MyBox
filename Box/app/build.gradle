@@ -25,7 +25,6 @@ dependencies {
     compile 'com.malinskiy:superrecyclerview:1.1.0'
     compile 'com.pnikosis:materialish-progress:1.5'
     compile 'com.android.support:support-annotations:22.0.0'
-    compile 'com.android.support:support-annotations:22.0.0'
     compile 'com.facebook.fresco:fresco:0.3.0+'
     compile project(':SMSSDK')
     compile files('libs/httpmime-4.1.3.jar')
@@ -44,7 +43,7 @@ dependencies {
     compile files('libs/umeng_social_sdk.jar')
     compile files('libs/umeng-update-v2.6.0.1.jar')
     compile 'com.umeng.analytics:analytics:latest.integration'
-    compile 'com.android.support:recyclerview-v7:22.1.0'
-    compile 'com.android.support:support-v4:22.1.0'
+    compile 'com.android.support:recyclerview-v7:22.1.1'
+    compile 'com.android.support:support-v4:22.1.1'
     compile project(':jpagerView')
 }
