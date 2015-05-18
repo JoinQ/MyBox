@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import com.box.mode.QueryInfoThing;
 
-public class QueryInfoRecyclerAdapter extends MyRecyclerAdapter<QueryInfoThing> {
+public class QueryInfoRecyclerAdapter extends BaseRecyclerAdapter<QueryInfoThing> {
     private BaseViewHolder myViewHolder;
     private QueryInfoThing[] arry;
     private boolean isfirstitem = true;

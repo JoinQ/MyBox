@@ -11,23 +11,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> implements View.OnClickListener {
+abstract public class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> implements View.OnClickListener {
     private OnRecyclerItemClickListener onRecyclerOnClickListener;
 
     private List<T> list = new ArrayList<T>();
     private T things;
     private Context context;
 
-    public MyRecyclerAdapter(T things, Context context) {
+    public BaseRecyclerAdapter(T things, Context context) {
         this.context = context;
         this.things = things;
     }
-    public MyRecyclerAdapter(List<T> list, Context context) {
+    public BaseRecyclerAdapter(List<T> list, Context context) {
         this.list = list;
         this.context = context;
     }
 
-    public MyRecyclerAdapter(T[] arry, Context context) {
+    public BaseRecyclerAdapter(T[] arry, Context context) {
         list = new ArrayList<T>(Arrays.asList(arry));
         this.context = context;
     }

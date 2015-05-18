@@ -18,7 +18,7 @@ import com.box.mode.SendedThing;
 import com.box.mode.SendingThing;
 import com.box.mode.Things;
 import com.box.util.Utils;
-import com.box.widget.MyRecyclerAdapter;
+import com.box.widget.BaseRecyclerAdapter;
 import com.box.widget.SendMeRecyclerAdapter;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
@@ -66,7 +66,7 @@ public class SendMeFragment extends Fragment {
             }
         });
 
-        adapter.setOnRecyclerOnClickListener(new MyRecyclerAdapter.OnRecyclerItemClickListener() {
+        adapter.setOnRecyclerOnClickListener(new BaseRecyclerAdapter.OnRecyclerItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
                 if (position == 1) {

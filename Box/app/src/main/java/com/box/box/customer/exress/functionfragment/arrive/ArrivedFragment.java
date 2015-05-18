@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,7 @@ import com.box.mode.ArrivingThing;
 import com.box.mode.Things;
 import com.box.util.Utils;
 import com.box.widget.ArriveRecyclerAdapter;
-import com.box.widget.MyRecyclerAdapter;
+import com.box.widget.BaseRecyclerAdapter;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
 public class ArrivedFragment extends Fragment {
@@ -64,7 +63,7 @@ public class ArrivedFragment extends Fragment {
             }
         });
 
-        adapter.setOnRecyclerOnClickListener(new MyRecyclerAdapter.OnRecyclerItemClickListener() {
+        adapter.setOnRecyclerOnClickListener(new BaseRecyclerAdapter.OnRecyclerItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
 

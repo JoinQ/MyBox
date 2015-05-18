@@ -4,10 +4,9 @@ package com.box.widget;
 import android.content.Context;
 import android.view.ViewGroup;
 
-import com.box.mode.QueryInfoThing;
 import com.box.mode.ShareDialog;
 
-public class ShareDialogRecyclerAdapter extends MyRecyclerAdapter<ShareDialog> {
+public class ShareDialogRecyclerAdapter extends BaseRecyclerAdapter<ShareDialog> {
     private BaseViewHolder myViewHolder;
     private boolean isfirstitem = true;
 

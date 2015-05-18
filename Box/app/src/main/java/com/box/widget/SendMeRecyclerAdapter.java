@@ -7,7 +7,7 @@ import com.box.mode.SendedThing;
 import com.box.mode.SendingThing;
 import com.box.mode.Things;
 
-public class SendMeRecyclerAdapter extends MyRecyclerAdapter<Things> {
+public class SendMeRecyclerAdapter extends BaseRecyclerAdapter<Things> {
     private Context context;
     private SendingThing[] sendingThings;
     private SendedThing[] sendedThings;

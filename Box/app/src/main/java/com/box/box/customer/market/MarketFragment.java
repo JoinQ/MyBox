@@ -16,7 +16,7 @@ import com.box.box.R;
 import com.box.mode.MarketThing;
 import com.box.util.Utils;
 import com.box.widget.MarketRecyclerAdapter;
-import com.box.widget.MyRecyclerAdapter;
+import com.box.widget.BaseRecyclerAdapter;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.jude.view.jpagerview.JPagerAdapter;
 import com.jude.view.jpagerview.JPagerView;
@@ -100,7 +100,7 @@ public class MarketFragment extends Fragment {
             }
         });
 
-        adapter.setOnRecyclerOnClickListener(new MyRecyclerAdapter.OnRecyclerItemClickListener() {
+        adapter.setOnRecyclerOnClickListener(new BaseRecyclerAdapter.OnRecyclerItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
                 if (position == 1) {

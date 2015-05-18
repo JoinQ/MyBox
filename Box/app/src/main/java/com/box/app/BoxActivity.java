@@ -12,6 +12,7 @@ public class BoxActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        MyApplication.getInstance().addActivity(this);
     }
 
     @Override
@@ -26,4 +27,9 @@ public class BoxActivity extends FragmentActivity {
         MobclickAgent.onPause(this);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        MyApplication.getInstance().destroyActivity(this);
+    }
 }

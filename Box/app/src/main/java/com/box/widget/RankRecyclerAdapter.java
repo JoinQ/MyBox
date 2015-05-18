@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.ViewGroup;
 import com.box.mode.RankThing;
 
-public class RankRecyclerAdapter extends MyRecyclerAdapter<RankThing> {
+public class RankRecyclerAdapter extends BaseRecyclerAdapter<RankThing> {
     private BaseViewHolder myViewHolder;
     private boolean isfirstitem = true;
 

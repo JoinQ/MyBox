@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 
 import com.box.mode.HistoryThing;
 
-public class CourierHistoryRecyclerAdapter extends MyRecyclerAdapter<HistoryThing> {
+public class CourierHistoryRecyclerAdapter extends BaseRecyclerAdapter<HistoryThing> {
 
     private BaseViewHolder myViewHolder;
 

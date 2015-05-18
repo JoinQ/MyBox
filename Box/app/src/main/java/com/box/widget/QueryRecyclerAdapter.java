@@ -7,7 +7,7 @@ import com.box.mode.QueryingGThing;
 import com.box.mode.QueryingSThing;
 import com.box.mode.Things;
 
-public class QueryRecyclerAdapter extends MyRecyclerAdapter<Things> {
+public class QueryRecyclerAdapter extends BaseRecyclerAdapter<Things> {
     private Context context;
     private QueryingGThing[] queryedThings;
     private QueryingSThing[] queryingThings;

@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import com.box.box.R;
 import com.box.mode.ShareDialog;
 import com.box.util.Utils;
-import com.box.widget.MyRecyclerAdapter;
+import com.box.widget.BaseRecyclerAdapter;
 import com.box.widget.ShareDialogRecyclerAdapter;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 import com.umeng.socialize.bean.SocializeEntity;
@@ -34,7 +34,7 @@ import com.umeng.socialize.weixin.media.WeiXinShareContent;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ShareDialogFragment extends DialogFragment implements MyRecyclerAdapter.OnRecyclerItemClickListener {
+public class ShareDialogFragment extends DialogFragment implements BaseRecyclerAdapter.OnRecyclerItemClickListener {
     private RecyclerView recyclerView;
     private ShareDialogRecyclerAdapter adapter;
 

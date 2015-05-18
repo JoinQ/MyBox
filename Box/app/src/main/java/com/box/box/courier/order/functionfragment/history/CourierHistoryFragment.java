@@ -16,7 +16,7 @@ import com.box.box.R;
 import com.box.mode.HistoryThing;
 import com.box.util.Utils;
 import com.box.widget.CourierHistoryRecyclerAdapter;
-import com.box.widget.MyRecyclerAdapter;
+import com.box.widget.BaseRecyclerAdapter;
 import com.malinskiy.superrecyclerview.OnMoreListener;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
@@ -70,7 +70,7 @@ public class CourierHistoryFragment extends Fragment {
             }
         });
 
-        adapter.setOnRecyclerOnClickListener(new MyRecyclerAdapter.OnRecyclerItemClickListener() {
+        adapter.setOnRecyclerOnClickListener(new BaseRecyclerAdapter.OnRecyclerItemClickListener() {
             @Override
             public void onItemClick(View v, int position) {
                 if (position == 1) {

@@ -7,7 +7,7 @@ import com.box.mode.ArrivedThing;
 import com.box.mode.ArrivingThing;
 import com.box.mode.Things;
 
-public class ArriveRecyclerAdapter extends MyRecyclerAdapter<Things> {
+public class ArriveRecyclerAdapter extends BaseRecyclerAdapter<Things> {
     private ArrivedThing[] arrivedThings;
     private ArrivingThing[] arrivingThings;
 

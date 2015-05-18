@@ -4,12 +4,11 @@ package com.box.widget;
 import android.content.Context;
 import android.view.ViewGroup;
 
-import com.box.mode.QueryInfoThing;
 import com.box.mode.SettingThing;
 
 import java.util.List;
 
-public class SettingRecyclerAdapter extends MyRecyclerAdapter<SettingThing> {
+public class SettingRecyclerAdapter extends BaseRecyclerAdapter<SettingThing> {
     private BaseViewHolder myViewHolder;
 
     public SettingRecyclerAdapter(SettingThing[] arry, Context context) {

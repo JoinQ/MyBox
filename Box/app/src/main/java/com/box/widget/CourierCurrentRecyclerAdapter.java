@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 
 import com.box.mode.CurrentThing;
 
-public class CourierCurrentRecyclerAdapter extends MyRecyclerAdapter<CurrentThing> {
+public class CourierCurrentRecyclerAdapter extends BaseRecyclerAdapter<CurrentThing> {
     private BaseViewHolder myViewHolder;
 
     public CourierCurrentRecyclerAdapter(CurrentThing[] things, Context context) {

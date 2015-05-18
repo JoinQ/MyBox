@@ -1,6 +1,7 @@
 package com.box.box.customer.me.function;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -8,16 +9,18 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.box.app.BoxActivity;
+import com.box.app.MyApplication;
 import com.box.box.R;
+import com.box.launch.LoginActivity;
 import com.box.mode.SettingThing;
-import com.box.widget.MyRecyclerAdapter;
+import com.box.widget.BaseRecyclerAdapter;
 import com.box.widget.SettingRecyclerAdapter;
 import com.umeng.update.UmengUpdateAgent;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SettingActivity extends BoxActivity implements MyRecyclerAdapter.OnRecyclerItemClickListener{
+public class SettingActivity extends BoxActivity implements BaseRecyclerAdapter.OnRecyclerItemClickListener{
     private RecyclerView recyclerView;
 
     private SettingRecyclerAdapter adapter;
@@ -75,6 +78,8 @@ public class SettingActivity extends BoxActivity implements MyRecyclerAdapter.On
             case 3:
                 break;
             case 4:
+                MyApplication.getInstance().exitAllActivity();
+                startActivity(new Intent(SettingActivity.this, LoginActivity.class));
                 break;
             case 5:
                 System.exit(0);
