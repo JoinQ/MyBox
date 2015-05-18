@@ -306,11 +306,7 @@ public class ForgetPage extends FakeActivity implements OnClickListener,
         } else if (id == id_btn_next) {
             // 请求发送短信验证码
             Log.i("etPassword", etPassword.getText().toString() + "   " + etPasswordAgain.getText().toString());
-            String pass = etPassword.getText().toString();
-            String passAgain = etPasswordAgain.getText().toString();
-            Log.i("pass", pass);
-            Log.i("passAgain", passAgain);
-            if (!pass.equals(passAgain)) {
+            if (!etPassword.getText().toString().equals(etPasswordAgain.getText().toString())) {
                 Log.i("不一样", "不一样");
                 Toast.makeText(getContext(), "密码不一致", Toast.LENGTH_SHORT).show();
             } else {
