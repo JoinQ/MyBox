@@ -9,12 +9,10 @@ import com.box.mode.ShareDialog;
 
 public class ShareDialogRecyclerAdapter extends MyRecyclerAdapter<ShareDialog> {
     private BaseViewHolder myViewHolder;
-    private ShareDialog[] arry;
     private boolean isfirstitem = true;
 
     public ShareDialogRecyclerAdapter(ShareDialog[] arry, Context context) {
         super(arry, context);
-        this.arry = arry;
     }
 
     @Override
@@ -26,7 +24,7 @@ public class ShareDialogRecyclerAdapter extends MyRecyclerAdapter<ShareDialog> {
     @Override
     public void OnBindViewHolder(BaseViewHolder holder, int position) {
         holder.itemView.setId(position);
-        holder.setFirstData(arry[position], isfirstitem);
+        holder.setFirstData(getItem(position), isfirstitem);
         isfirstitem = false;
     }
 }

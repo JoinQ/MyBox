@@ -1,12 +1,12 @@
 package com.box.mode;
 
 public class QueryingSThing {
-    public String number;
-    public int headImgId;
-    public String name;
-    public String phone;
-    public String time;
-    public String state;
+    private String number;
+    private int headImgId;
+    private String name;
+    private String phone;
+    private String time;
+    private String state;
 
     public QueryingSThing(String number, int headImgId, String name, String phone, String time, String state) {
         this.number = number;

@@ -1,10 +1,9 @@
 package com.box.mode;
 
 public class QueryInfoThing {
-
-    public int image;
-    public String status;
-    public String time;
+    private int image;
+    private String status;
+    private String time;
 
     public QueryInfoThing(int image, String status, String time) {
         this.image = image;

@@ -2,6 +2,7 @@ package com.box.widget;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import com.box.mode.Things;
@@ -13,7 +14,7 @@ import java.util.List;
 abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> implements View.OnClickListener {
     private OnRecyclerItemClickListener onRecyclerOnClickListener;
 
-    private List<T> list;
+    private List<T> list = new ArrayList<T>();
     private T things;
     private Context context;
 
@@ -46,6 +47,13 @@ abstract public class MyRecyclerAdapter<T> extends RecyclerView.Adapter<BaseView
         if (arry != null) {
             List list2 = new ArrayList<T>(Arrays.asList(arry));
             list.addAll(list2);
+        }
+        notifyDataSetChanged();
+    }
+
+    public void add(List<T> list) {
+        if (list != null) {
+            this.list.addAll(list);
         }
         notifyDataSetChanged();
     }

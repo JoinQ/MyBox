@@ -1,12 +1,11 @@
 package com.box.mode;
 
 public class RankThing {
-
-    public int grade;
-    public int head;
-    public String name;
-    public int level;
-    public int money;
+    private int grade;
+    private int head;
+    private String name;
+    private int level;
+    private int money;
 
     public int getGrade() {
         return grade;

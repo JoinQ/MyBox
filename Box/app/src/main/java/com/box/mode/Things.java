@@ -1,8 +1,8 @@
 package com.box.mode;
 
 public class Things<T, M> {
-    public T[] t;
-    public M[] m;
+    private T[] t;
+    private M[] m;
 
     public Things(T[] t, M[] m) {
         this.t = t;

@@ -2,12 +2,12 @@ package com.box.mode;
 
 
 public class CurrentThing {
-    public int headerId;
-    public String name;
-    public String number;
-    public String userName;
-    public String phone;
-    public String address;
+    private int headerId;
+    private String name;
+    private String number;
+    private String userName;
+    private String phone;
+    private String address;
 
     public CurrentThing(String address, int headerId, String name, String number, String phone, String userName) {
         this.address = address;

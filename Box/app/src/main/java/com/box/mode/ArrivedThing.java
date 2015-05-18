@@ -1,12 +1,12 @@
 package com.box.mode;
 
 public class ArrivedThing {
-    public String number;
-    public int headImgId;
-    public String name;
-    public String phone;
-    public String time;
-    public String place;
+    private String number;
+    private int headImgId;
+    private String name;
+    private String phone;
+    private String time;
+    private String place;
 
     public ArrivedThing(String number, int headImgId, String name, String phone, String time, String place) {
         this.number = number;

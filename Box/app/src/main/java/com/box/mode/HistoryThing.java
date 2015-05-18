@@ -1,12 +1,12 @@
 package com.box.mode;
 
 public class HistoryThing {
-    public int headerId;
-    public String number;
-    public String time;
-    public String gAddress;
-    public String pAddress;
-    public String comment;
+    private int headerId;
+    private String number;
+    private String time;
+    private String gAddress;
+    private String pAddress;
+    private String comment;
 
     public HistoryThing(String comment, String gAddress, int headerId, String number, String pAddress, String time) {
         this.comment = comment;

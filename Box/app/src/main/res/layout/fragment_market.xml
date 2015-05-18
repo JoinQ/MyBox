@@ -1,8 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroud"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
+    <com.jude.view.jpagerview.JPagerView
+        android:id="@+id/maket_jpager"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        app:autoplay="3000"
+        app:hint_alpha="0"
+        app:hint_mode="point" />
+
+    <RelativeLayout
+        android:id="@+id/market_notification"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:background="@android:color/white">
+        <ImageView
+            android:id="@+id/maket_laba"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/laba"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/maket_laba"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:text="购物满200送100，最后两天。"/>
+
+    </RelativeLayout>
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+        android:id="@+id/maket_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        app:layout_empty="@layout/view_empty"
+        app:layout_moreProgress="@layout/view_progress"
+        app:layout_progress="@layout/view_progress"
+        app:scrollbarStyle="insideInset" />
 </LinearLayout>

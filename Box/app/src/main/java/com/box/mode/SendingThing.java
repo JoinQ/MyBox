@@ -1,12 +1,12 @@
 package com.box.mode;
 
 public class SendingThing {
-    public String number;
-    public int headImgId;
-    public String name;
-    public String phone;
-    public String state;
-    public String over;
+    private String number;
+    private int headImgId;
+    private String name;
+    private String phone;
+    private String state;
+    private String over;
 
     public SendingThing(String number, int headImgId, String phone, String name, String state, String over) {
         this.number = number;

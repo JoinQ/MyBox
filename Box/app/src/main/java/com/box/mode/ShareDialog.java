@@ -1,8 +1,8 @@
 package com.box.mode;
 
 public class ShareDialog {
-    public int id;
-    public String name;
+    private int id;
+    private String name;
 
     public ShareDialog(int id, String name) {
         this.id = id;
