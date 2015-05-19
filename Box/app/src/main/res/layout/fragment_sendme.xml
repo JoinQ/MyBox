@@ -15,6 +15,7 @@
         android:paddingRight="12dp">
 
         <FrameLayout
+            android:id="@+id/sendme_fl_wyjj"
             android:layout_width="0dp"
             android:layout_height="72dp"
             android:layout_weight="1"
@@ -42,6 +43,7 @@
         </FrameLayout>
 
         <FrameLayout
+            android:id="@+id/sendme_fl_zfxx"
             android:layout_width="0dp"
             android:layout_height="72dp"
             android:layout_weight="1"
