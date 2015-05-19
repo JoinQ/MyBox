@@ -25,4 +25,8 @@
 
     <color name="rank_my_background">#888888</color>
     <color name="rank_my_font">#fcff00</color>
+    
+    <color name="sendme_wyjj">#ff7f4d</color>
+    <color name="sendme_zfxx">#ffa94d</color>
+
 </resources>
