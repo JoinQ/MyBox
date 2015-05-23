@@ -1,5 +1,6 @@
 package com.box.box.customer.exress.functionfragment.sendme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.AnimationSet;
 import android.view.animation.DecelerateInterpolator;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.box.box.R;
@@ -22,11 +24,13 @@ import com.box.widget.BaseRecyclerAdapter;
 import com.box.widget.SendMeRecyclerAdapter;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
-public class SendMeFragment extends Fragment {
+public class SendMeFragment extends Fragment implements View.OnClickListener{
 
     private SuperRecyclerView recyclerView;
     private Things things;
     private SendMeRecyclerAdapter adapter;
+
+    private FrameLayout sendme_fl_wyjj;
 
     private View root;
     private LinearLayout headerView;
@@ -53,6 +57,8 @@ public class SendMeFragment extends Fragment {
     private void initView(View v) {
         headerView = ((LinearLayout) root.findViewById(R.id.sendme_header));
         recyclerView = (SuperRecyclerView) v.findViewById(R.id.sendme_recyclerview);
+        sendme_fl_wyjj= (FrameLayout) v.findViewById(R.id.sendme_fl_wyjj);
+        sendme_fl_wyjj.setOnClickListener(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
         recyclerView.hideProgress();
@@ -105,5 +111,15 @@ public class SendMeFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.sendme_fl_wyjj:
+                startActivity(new Intent(this.getActivity(),WantSendActivity.class));
+                break;
+        }
     }
 }

@@ -11,6 +11,13 @@
 
     <string name="login_forget"><u>忘记密码?</u></string>
 
+    <string name="wantsend_jjr"><font color="red">*</font><font color="black">寄件人：</font></string>
+    <string name="wantsend_sjr"><font color="red">*</font><font color="black">收件人：</font></string>
+    <string name="wantsend_phone"><font color="red">*</font><font color="black">电话：</font></string>
+    <string name="wantsend_boxid"><font color="red">*</font><font color="black">柜子编号：</font></string>
+    <string name="wantsend_address"><font color="red">*</font><font color="black">收件地址：</font></string>
+    <string name="wantsend_pay"><font color="red">*</font><font color="black">付款方式：</font></string>
+
 
     <string name="recycleradapter_time">到达时间：%1$s</string>
     <string name="recycleradapter_place">到达地址：%1$s</string>
@@ -34,6 +41,9 @@
     <string name="title_activity_my_information">MyInformationActivity</string>
     <string name="title_activity_setting">SettingActivity</string>
     <string name="title_activity_rank">RankActivity</string>
+    <string name="title_activity_want_send">WantSendActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 
 
 </resources>
