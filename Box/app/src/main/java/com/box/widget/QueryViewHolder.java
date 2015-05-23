@@ -10,6 +10,11 @@ import com.box.box.R;
 import com.box.mode.QueryingGThing;
 import com.box.mode.QueryingSThing;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class QueryViewHolder extends BaseViewHolder<QueryingSThing, QueryingGThing> {
     private TextView mTitleText;
     private TextView mNameText;
@@ -20,6 +25,8 @@ public class QueryViewHolder extends BaseViewHolder<QueryingSThing, QueryingGThi
 
     private ImageView mComeRight;
     private ImageView mHeader;
+    private ImageView mOverday;
+
     private Context context;
 
     public QueryViewHolder(ViewGroup parent) {
@@ -32,6 +39,7 @@ public class QueryViewHolder extends BaseViewHolder<QueryingSThing, QueryingGThi
         mThreeLineText = (TextView) itemView.findViewById(R.id.recyclerView_threeline);
         mPingLunBtn = (TextView) itemView.findViewById(R.id.recyclerview_pinglun);
         mHeader = (ImageView) itemView.findViewById(R.id.recyclerView_header);
+        mOverday = (ImageView) itemView.findViewById(R.id.recyclerView_overday);
         mComeRight = (ImageView) itemView.findViewById(R.id.recyclerview_comein);
     }
 
@@ -51,6 +59,15 @@ public class QueryViewHolder extends BaseViewHolder<QueryingSThing, QueryingGThi
         mThreeLineText.setText(context.getString(R.string.recycleradapter_state, data.getState()));
         mComeRight.setVisibility(View.VISIBLE);
         mPingLunBtn.setVisibility(View.INVISIBLE);
+
+        if (data.isOverday())
+        {
+            mOverday.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+            mOverday.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override
@@ -69,5 +86,6 @@ public class QueryViewHolder extends BaseViewHolder<QueryingSThing, QueryingGThi
         mThreeLineText.setText(context.getString(R.string.recycleradapter_state, data.getState()));
         mPingLunBtn.setVisibility(View.INVISIBLE);
         mComeRight.setVisibility(View.VISIBLE);
+        mOverday.setVisibility(View.INVISIBLE);
     }
 }

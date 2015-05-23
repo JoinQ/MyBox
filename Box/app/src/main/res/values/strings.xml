@@ -6,8 +6,8 @@
     <string name="recycleradapter_receiving">待收货 (%1$s)</string>
     <string name="recycleradapter_received">已收货 (%1$s)</string>
     <string name="recycleradapter_onroad">在途中 (%1$s)</string>
-    <string name="recycleradapter_wayget">收货订单 (%1$s)</string>
-    <string name="recycleradapter_waysend">寄货订单 (%1$s)</string>
+    <string name="recycleradapter_wayget">已到订单 (%1$s)</string>
+    <string name="recycleradapter_waysend">在途中 (%1$s)</string>
 
 
     <string name="recycleradapter_time">到达时间：%1$s</string>

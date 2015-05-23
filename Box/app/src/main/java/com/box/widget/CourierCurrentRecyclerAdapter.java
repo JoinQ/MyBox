@@ -5,6 +5,8 @@ import android.view.ViewGroup;
 
 import com.box.mode.CurrentThing;
 
+import java.text.ParseException;
+
 public class CourierCurrentRecyclerAdapter extends BaseRecyclerAdapter<CurrentThing> {
     private BaseViewHolder myViewHolder;
 
@@ -19,7 +21,7 @@ public class CourierCurrentRecyclerAdapter extends BaseRecyclerAdapter<CurrentTh
     }
 
     @Override
-    public void OnBindViewHolder(BaseViewHolder holder, int position) {
+    public void OnBindViewHolder(BaseViewHolder holder, int position) throws ParseException {
         holder.itemView.setId(position);
         holder.itemView.setTag("cao");
         holder.setFirstData(getItem(position), false);

@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.text.ParseException;
+
 abstract public class BaseViewHolder<M, T> extends RecyclerView.ViewHolder {
     public BaseViewHolder(View itemView) {
         super(itemView);

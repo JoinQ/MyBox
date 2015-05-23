@@ -34,9 +34,11 @@ public class QueryFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        QueryingSThing[] queryingSThing = {new QueryingSThing("3", R.drawable.coporation1, "顺风", "12345678901", "2015-5-1 6：00", "已到达渝北小区2栋3号柜"),
-                new QueryingSThing("3", R.drawable.coporation2, "中通", "12345678901", "2015-5-1 6:00", "已到达渝北小区1栋16号柜")};
-        QueryingGThing[] queryingGThing = {new QueryingGThing("2", R.drawable.coporation1, "顺风", "12345678901", "2015-5-1 6：00", "已到达渝北小区2栋3号柜"),
+        QueryingSThing[] queryingSThing = {new QueryingSThing("3", R.drawable.coporation1, "顺风", "12345678901", "2015-5-1 6：00", "已到达渝北小区2栋3号柜",true),
+                new QueryingSThing("3", R.drawable.coporation2, "中通", "12345678901", "2015-5-1 6:00", "已到达渝北小区1栋16号柜",false),
+        new QueryingSThing("3", R.drawable.coporation2, "北通", "12345678901", "2015-5-1 6:00", "已到达渝北小区1栋16号柜",false)};
+
+    QueryingGThing[] queryingGThing = {new QueryingGThing("2", R.drawable.coporation1, "顺风", "12345678901", "2015-5-1 6：00", "已到达渝北小区2栋3号柜"),
                 new QueryingGThing("2", R.drawable.coporation2, "中通", "12345678901", "2015-5-1 6:00", "已到达渝北小区1栋16号柜")};
         things = new Things<QueryingSThing, QueryingGThing>(queryingSThing, queryingGThing);
         adapter = new QueryRecyclerAdapter(things, getActivity());

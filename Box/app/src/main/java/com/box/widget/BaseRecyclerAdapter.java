@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.box.mode.Things;
 
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -70,7 +71,7 @@ abstract public class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
 
     abstract public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType);
 
-    abstract public void OnBindViewHolder(BaseViewHolder holder, int position);
+    abstract public void OnBindViewHolder(BaseViewHolder holder, int position) throws ParseException;
 
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -80,7 +81,11 @@ abstract public class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<BaseVi
     @Override
     public void onBindViewHolder(BaseViewHolder holder, int position) {
         holder.itemView.setOnClickListener(this);
-        OnBindViewHolder(holder, position);
+        try {
+            OnBindViewHolder(holder, position);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

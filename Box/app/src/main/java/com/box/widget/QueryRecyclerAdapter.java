@@ -7,6 +7,8 @@ import com.box.mode.QueryingGThing;
 import com.box.mode.QueryingSThing;
 import com.box.mode.Things;
 
+import java.text.ParseException;
+
 public class QueryRecyclerAdapter extends BaseRecyclerAdapter<Things> {
     private Context context;
     private QueryingGThing[] queryedThings;
@@ -30,7 +32,7 @@ public class QueryRecyclerAdapter extends BaseRecyclerAdapter<Things> {
     }
 
     @Override
-    public void OnBindViewHolder(BaseViewHolder holder, int position) {
+    public void OnBindViewHolder(BaseViewHolder holder, int position)  {
         holder.itemView.setId(position);
         holder.itemView.setTag("cao");
         if (queryingThings != null && queryedThings != null) {
