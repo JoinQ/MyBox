@@ -7,14 +7,16 @@ public class SendedThing {
     private String phone;
     private String state;
     private String pinglun;
+    private boolean isPinglun;
 
-    public SendedThing(String number, int headImgId, String name, String phone, String state, String pinglun) {
+    public SendedThing(String number, int headImgId, String name, String phone, String state, String pinglun, boolean isPinglun) {
         this.number = number;
         this.headImgId = headImgId;
         this.name = name;
         this.phone = phone;
         this.state = state;
         this.pinglun = pinglun;
+        this.isPinglun = isPinglun;
     }
 
     public String getNumber() {
@@ -63,5 +65,13 @@ public class SendedThing {
 
     public void setPinglun(String pinglun) {
         this.pinglun = pinglun;
+    }
+
+    public boolean isPinglun() {
+        return isPinglun;
+    }
+
+    public void setIsPinglun(boolean isPinglun) {
+        this.isPinglun = isPinglun;
     }
 }

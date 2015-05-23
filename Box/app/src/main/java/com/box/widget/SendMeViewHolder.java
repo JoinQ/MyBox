@@ -1,5 +1,6 @@
 package com.box.widget;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,12 +8,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.box.box.R;
+import com.box.box.customer.exress.functionfragment.arrive.CommentDialogFragment;
 import com.box.mode.ArrivedThing;
 import com.box.mode.ArrivingThing;
 import com.box.mode.SendedThing;
 import com.box.mode.SendingThing;
 
-public class SendMeViewHolder extends BaseViewHolder<SendingThing, SendedThing> {
+public class SendMeViewHolder extends BaseViewHolder<SendingThing, SendedThing> implements View.OnClickListener{
     private TextView mTitleText;
     private TextView mNameText;
     private TextView mPhoneText;
@@ -69,8 +71,24 @@ public class SendMeViewHolder extends BaseViewHolder<SendingThing, SendedThing> 
         mPhoneText.setText(data.getPhone());
         mSecondLineText.setText(context.getString(R.string.recycleradapter_state, data.getState()));
         mThreeLineText.setText(context.getString(R.string.recycleradapter_pinglun, data.getPinglun()));
-        mPingLunBtn.setVisibility(View.VISIBLE);
-        mPingLunBtn.setText("已评");
+        if (data.isPinglun()) {
+            mPingLunBtn.setVisibility(View.INVISIBLE);
+        } else {
+            mPingLunBtn.setVisibility(View.VISIBLE);
+            mPingLunBtn.setText("立即评价");
+            mPingLunBtn.setOnClickListener(this);
+        }
         mComeRight.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.recyclerview_pinglun:
+                new CommentDialogFragment().show(((Activity)context).getFragmentManager(), "comment");
+                break;
+            default:
+                break;
+        }
     }
 }

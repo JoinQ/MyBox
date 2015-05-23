@@ -41,8 +41,8 @@ public class SendMeFragment extends Fragment implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         SendingThing[] sendingThing = {new SendingThing("3", R.drawable.coporation1, "顺" +
                 "风", "12345678901", "快递员已经取走", "2015-5-1 6：00")};
-        SendedThing[] sendedThing = {new SendedThing("2", R.drawable.coporation1, "顺风", "1234567980", "已经收货", "非常好啊！"),
-                new SendedThing("2", R.drawable.coporation2, "中通", "1234567980", "送货途中", "真牛逼！")};
+        SendedThing[] sendedThing = {new SendedThing("2", R.drawable.coporation1, "顺风", "1234567980", "已经收货", "暂未评论", false),
+                new SendedThing("2", R.drawable.coporation2, "中通", "1234567980", "送货途中", "真牛逼！", true)};
         things = new Things<SendingThing, SendedThing>(sendingThing, sendedThing);
         adapter = new SendMeRecyclerAdapter(things, getActivity());
     }
