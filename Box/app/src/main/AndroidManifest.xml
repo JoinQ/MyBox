@@ -44,7 +44,9 @@
             android:name="com.box.launch.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name="com.box.launch.RegisterActivity" />
-        <activity android:name=".customer.MainActivity" />
+        <activity android:name=".customer.MainActivity"
+            android:logo="@drawable/courier_me_head"
+            />
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
