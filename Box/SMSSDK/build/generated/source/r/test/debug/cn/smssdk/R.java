@@ -82,21 +82,22 @@ public final class R {
 		public static final int btn_dialog_cancel = 0x7f090002;
 		public static final int btn_dialog_ok = 0x7f090001;
 		public static final int btn_invite = 0x7f090007;
-		public static final int btn_next = 0x7f090015;
-		public static final int btn_sounds = 0x7f090019;
-		public static final int btn_submit = 0x7f09001b;
+		public static final int btn_next = 0x7f090016;
+		public static final int btn_sounds = 0x7f09001a;
+		public static final int btn_submit = 0x7f09001c;
 		public static final int clContact = 0x7f090008;
 		public static final int clCountry = 0x7f09000e;
-		public static final int et_put_identify = 0x7f090018;
+		public static final int et_put_identify = 0x7f090019;
 		public static final int et_write_password = 0x7f090014;
+		public static final int et_write_password_again = 0x7f090015;
 		public static final int et_write_phone = 0x7f090012;
-		public static final int ivSearch = 0x7f09001f;
+		public static final int ivSearch = 0x7f090020;
 		public static final int iv_clear = 0x7f090013;
 		public static final int iv_contact = 0x7f09000a;
 		public static final int iv_contact_icon = 0x7f090003;
-		public static final int llSearch = 0x7f090020;
-		public static final int llTitle = 0x7f09001e;
-		public static final int ll_back = 0x7f09001d;
+		public static final int llSearch = 0x7f090021;
+		public static final int llTitle = 0x7f09001f;
+		public static final int ll_back = 0x7f09001e;
 		public static final int rl_country = 0x7f09000f;
 		public static final int rl_lv_item_bg = 0x7f090009;
 		public static final int tv_contact = 0x7f09000c;
@@ -105,13 +106,13 @@ public final class R {
 		public static final int tv_country = 0x7f090010;
 		public static final int tv_country_num = 0x7f090011;
 		public static final int tv_dialog_hint = 0x7f090000;
-		public static final int tv_dialog_title = 0x7f090021;
-		public static final int tv_identify_notify = 0x7f090016;
+		public static final int tv_dialog_title = 0x7f090022;
+		public static final int tv_identify_notify = 0x7f090017;
 		public static final int tv_invite_hint = 0x7f090006;
 		public static final int tv_name = 0x7f09000b;
-		public static final int tv_phone = 0x7f090017;
-		public static final int tv_title = 0x7f09001c;
-		public static final int tv_unreceive_identify = 0x7f09001a;
+		public static final int tv_phone = 0x7f090018;
+		public static final int tv_title = 0x7f09001d;
+		public static final int tv_unreceive_identify = 0x7f09001b;
 	}
 	public static final class layout {
 		public static final int smssdk_back_verify_dialog = 0x7f030000;
@@ -210,8 +211,9 @@ public final class R {
 		public static final int smssdk_write_mobile_phone = 0x7f07004b;
 		public static final int smssdk_write_new_password = 0x7f07004c;
 		public static final int smssdk_write_password = 0x7f07004d;
-		public static final int smssdk_write_right_mobile_phone = 0x7f07004e;
-		public static final int smssdk_your_ccount_is_verified = 0x7f07004f;
+		public static final int smssdk_write_password_again = 0x7f07004e;
+		public static final int smssdk_write_right_mobile_phone = 0x7f07004f;
+		public static final int smssdk_your_ccount_is_verified = 0x7f070050;
 	}
 	public static final class style {
 		public static final int AppTheme = 0x7f080000;

@@ -103,8 +103,9 @@
                 android:layout_alignParentRight="true"
                 android:padding="4dp"
                 android:textSize="14sp"
-                android:layout_width="wrap_content"
-                android:textColor="@color/actionbarColor"
+                android:layout_width="64dp"
+                android:background="@drawable/btn_bg"
+                android:textColor="@android:color/white"
                 android:layout_height="wrap_content" />
 
             <ImageView

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/app/BoxActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/arrive/CommentDialogFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/query/QueryFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/exress/functionfragment/query/QueryInfoActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/box/customer/me/function/SettingActivity.java" charset="UTF-8" />
@@ -11,7 +12,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/mode/QueryingSThing.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/mode/SettingThing.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/mode/ShareDialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/view/MyRadioGroup.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/box/widget/BaseRecyclerAdapter.java" charset="UTF-8" />
   </component>
 </project>
-

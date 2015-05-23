@@ -1,16 +1,21 @@
 package com.box.widget;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.box.box.R;
+import com.box.box.customer.exress.functionfragment.arrive.CommentDialogFragment;
+import com.box.box.customer.me.function.ShareDialogFragment;
 import com.box.mode.ArrivedThing;
 import com.box.mode.ArrivingThing;
+import com.box.util.Utils;
 
-public class ArriveViewHolder extends BaseViewHolder<ArrivedThing, ArrivingThing> {
+public class ArriveViewHolder extends BaseViewHolder<ArrivedThing, ArrivingThing> implements OnClickListener{
     private TextView mTitleText;
     private TextView mNameText;
     private TextView mPhoneText;
@@ -67,8 +72,24 @@ public class ArriveViewHolder extends BaseViewHolder<ArrivedThing, ArrivingThing
         mPhoneText.setText(data.getPhone());
         mSecondLineText.setText(context.getString(R.string.recycleradapter_gettime, data.getState()));
         mThreeLineText.setText(context.getString(R.string.recycleradapter_pinglun, data.getPinglun()));
-        mPingLunBtn.setVisibility(View.VISIBLE);
-        mPingLunBtn.setText("已评");
+        if (data.isPinglun()) {
+            mPingLunBtn.setVisibility(View.INVISIBLE);
+        } else {
+            mPingLunBtn.setVisibility(View.VISIBLE);
+            mPingLunBtn.setText("立即评价");
+            mPingLunBtn.setOnClickListener(this);
+        }
         mComeRight.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.recyclerview_pinglun:
+                new CommentDialogFragment().show(((Activity)context).getFragmentManager(), "comment");
+                break;
+            default:
+                break;
+        }
     }
 }

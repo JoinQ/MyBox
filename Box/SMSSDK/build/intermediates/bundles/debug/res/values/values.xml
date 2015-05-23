@@ -370,6 +370,7 @@
     <string name="smssdk_write_mobile_phone">请填写手机号码</string>
     <string name="smssdk_write_new_password">请设置新密码（至少8位）</string>
     <string name="smssdk_write_password">请设置密码（至少8位）</string>
+    <string name="smssdk_write_password_again">请再次输入密码</string>
     <string name="smssdk_write_right_mobile_phone">请填写正确的手机号码</string>
     <string name="smssdk_your_ccount_is_verified">验证成功</string>
     <!-- From: file:/F:/java/andriod/android_studio/android_gtihub/Box/SMSSDK/src/main/res/values/smssdk_styles.xml -->
