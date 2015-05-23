@@ -32,7 +32,7 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
     private Button login_bt_login;
     private EditText login_et_id;
     private EditText login_et_password;
-    private TextView login_tv_register;
+    private Button login_bt_register;
     private TextView login_tv_forget;
     private ImageView login_iv_head;
     private LinearLayout login_return;
@@ -52,14 +52,13 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
         login_bt_login = (Button) findViewById(R.id.login_bt_login);
         login_et_id = (EditText) findViewById(R.id.login_et_id);
         login_et_password = (EditText) findViewById(R.id.login_et_password);
-        login_tv_register = (TextView) findViewById(R.id.login_tv_register);
         login_tv_forget = (TextView) findViewById(R.id.login_tv_forget);
         login_iv_head = (ImageView) findViewById(R.id.login_iv_head);
-
+        login_bt_register = (Button) findViewById(R.id.login_bt_register);
 
         login_return.setOnClickListener(this);
         login_bt_login.setOnClickListener(this); //登陆
-        login_tv_register.setOnClickListener(this); //忘记密码
+        login_bt_register.setOnClickListener(this); //忘记密码
         login_tv_forget.setOnClickListener(this); //注册
         login_return.destroyDrawingCache();
     }
@@ -82,7 +81,7 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
                 startActivity(new Intent(LoginActivity.this, CourierMainActivity.class));
                 finish();
                 break;
-            case R.id.login_tv_register:
+            case R.id.login_bt_register:
                 RegisterPage registerPage = new RegisterPage(LoginActivity.this);
                 registerPage.setRegisterCallback(new EventHandler() {
                     public void afterEvent(int event, int result, Object data) {

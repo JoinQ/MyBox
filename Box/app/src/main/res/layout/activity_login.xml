@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:background="@drawable/login_backgroung"
+    android:background="@color/login_background"
     android:padding="16dp">
 
     <LinearLayout
@@ -26,10 +26,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@color/login_font"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="8dp"
-                android:text="我的快递" />
+                android:text="首页" />
         </LinearLayout>
 
         <FrameLayout
@@ -37,12 +37,12 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="80dp"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/login_female"
+                android:src="@drawable/courier_me_head"
                 android:id="@+id/login_iv_head" />
         </FrameLayout>
 
@@ -55,15 +55,10 @@
                 android:id="@+id/login_tv_forget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="忘记密码"
-                android:layout_gravity="bottom|left" />
+                android:text="@string/login_forget"
+                android:textColor="#225c87"
+                android:layout_gravity="bottom|center_horizontal" />
 
-            <TextView
-                android:id="@+id/login_tv_register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="没有账号，立即注册"
-                android:layout_gravity="bottom|right" />
         </FrameLayout>
 
     </LinearLayout>
@@ -72,70 +67,86 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:padding="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/login_edittext_shape">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/login_id" />
-
-            <EditText
-                android:id="@+id/login_et_id"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@null"
-                android:textCursorDrawable="@drawable/color_cursor"
-                android:textSize="15dp"
-                android:maxLength="11"
-                android:textColor="#656464"
-                android:textColorHint="#656464"
-                android:cursorVisible="true"
-                android:hint="请输入你的手机号"></EditText>
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp">
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:padding="10dp"
-            android:background="@drawable/login_edittext_shape">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/login_password" />
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/login_id" />
 
                 <EditText
-                    android:id="@+id/login_et_password"
+                    android:id="@+id/login_et_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@null"
-                    android:textSize="15dp"
-                    android:password="true"
                     android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="15dp"
+                    android:maxLength="11"
                     android:textColor="#656464"
                     android:textColorHint="#656464"
                     android:cursorVisible="true"
-                    android:hint="请输入密码"></EditText>
+                    android:hint="请输入你的手机号"></EditText>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/login_font" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/login_password" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/login_et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:textSize="15dp"
+                        android:password="true"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textColor="#656464"
+                        android:textColorHint="#656464"
+                        android:cursorVisible="true"
+                        android:hint="请输入密码"></EditText>
 
                     <CheckBox
                         android:id="@+id/login_cb_remember"
@@ -145,9 +156,17 @@
                         android:button="@null"
                         android:checked="true"
                         android:layout_gravity="right|center_vertical" />
-            </FrameLayout>
+                </FrameLayout>
 
+            </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/login_font" />
         </LinearLayout>
 
         <Button
@@ -156,8 +175,19 @@
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="40dp"
             android:text="登录"
-            android:background="@drawable/login_button_shape" />
+            android:background="@drawable/login_login_button_shape" />
+
+        <Button
+            android:id="@+id/login_bt_register"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:text="注册"
+            android:textColor="#014141"
+            android:background="@drawable/login_register_button_shape" />
     </LinearLayout>
 </FrameLayout>

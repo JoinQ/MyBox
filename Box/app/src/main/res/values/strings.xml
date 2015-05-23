@@ -9,6 +9,8 @@
     <string name="recycleradapter_wayget">已到订单 (%1$s)</string>
     <string name="recycleradapter_waysend">在途中 (%1$s)</string>
 
+    <string name="login_forget"><u>忘记密码?</u></string>
+
 
     <string name="recycleradapter_time">到达时间：%1$s</string>
     <string name="recycleradapter_place">到达地址：%1$s</string>
