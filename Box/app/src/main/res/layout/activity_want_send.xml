@@ -7,172 +7,232 @@
     android:padding="16dp"
     android:background="@android:color/white">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/wantsend_jjr" />
-
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textColor="@android:color/black"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:cursorVisible="true"
-            android:background="@null" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/my_info_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wantsend_jjr" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/wantsend_sjr" />
+                <EditText
+                    android:id="@+id/want_send_et_jjr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:cursorVisible="true"
+                    android:background="@null" />
+            </LinearLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textColor="@android:color/black"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:cursorVisible="true"
-            android:background="@null" />
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/my_info_view" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/my_info_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wantsend_sjr" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/wantsend_phone" />
+                <EditText
+                    android:id="@+id/want_send_et_sjr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:cursorVisible="true"
+                    android:background="@null" />
+            </LinearLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textColor="@android:color/black"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:cursorVisible="true"
-            android:background="@null" />
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/my_info_view" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/my_info_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wantsend_phone" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/wantsend_boxid" />
+                <EditText
+                    android:id="@+id/want_send_et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:cursorVisible="true"
+                    android:background="@null" />
+            </LinearLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textColor="@android:color/black"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:cursorVisible="true"
-            android:background="@null" />
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/my_info_view" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/my_info_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wantsend_boxid" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/wantsend_address" />
+                <EditText
+                    android:id="@+id/want_send_et_boxid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:cursorVisible="true"
+                    android:background="@null" />
+            </LinearLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textColor="@android:color/black"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:cursorVisible="true"
-            android:background="@null" />
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/my_info_view" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/my_info_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wantsend_address" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:layout_gravity="center_vertical"
-            android:text="@string/wantsend_pay" />
+                <EditText
+                    android:id="@+id/want_send_et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:cursorVisible="true"
+                    android:background="@null" />
+            </LinearLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:textColor="@android:color/black"
-            android:textCursorDrawable="@drawable/color_cursor"
-            android:cursorVisible="true"
-            android:background="@null" />
-    </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/my_info_view" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:background="@color/my_info_view" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/wantsend_pay" />
+
+                <Button
+                    android:id="@+id/want_send_alipay"
+                    android:layout_width="72dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/want_send_button_shape_on"
+                    android:textColor="@color/want_send_button_on"
+                    android:layout_marginRight="10dp"
+                    android:text="支付宝" />
+
+                <Button
+                    android:id="@+id/want_send_arrivepay"
+                    android:layout_width="72dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/want_send_button_shape_off"
+                    android:textColor="@color/want_send_button_off"
+                    android:text="到付" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/my_info_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:text="备注：" />
+
+                <EditText
+                    android:id="@+id/want_send_et_remarks"
+                    android:padding="4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:cursorVisible="true"
+                    android:gravity="top"
+                    android:background="@drawable/want_send_remarks" />
+
+                <Button
+                    android:id="@+id/want_send_bt_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/want_send_button_shape"
+                    android:text="提交"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

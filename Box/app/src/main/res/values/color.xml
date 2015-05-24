@@ -18,6 +18,10 @@
 
     <color name="express_information_background">#ebebeb</color>
 
+    <color name="want_send_button_on">#ff4646</color>
+    <color name="want_send_button_off">#4e4d4d</color>
+
+
     <color name="arrived_card_background">#f2f2f2</color>
     <color name="arrived_card_font">#6f6f6f</color>
     <color name="arrived_card_password">#e7211b</color>
