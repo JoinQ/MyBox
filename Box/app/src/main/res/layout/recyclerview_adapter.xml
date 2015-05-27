@@ -34,7 +34,7 @@
                     android:id="@+id/recyclerView_overday"
                     android:src="@drawable/query_over_1_day"
                     android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_height="37dp"
                     android:visibility="invisible"/>
                 
                 <ImageView
