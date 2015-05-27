@@ -4,18 +4,38 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/recyclerView_title"
-        android:layout_margin="4dp"
-        android:clickable="false"
-        android:background="@color/backgroud"
+    <FrameLayout
+        android:id="@+id/recyclerView_fl_title"
         android:layout_width="match_parent"
-        android:gravity="center_vertical"
-        android:textSize="13sp"
-        android:textColor="#6c6c6c"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@color/backgroud">
+
+        <TextView
+            android:id="@+id/recyclerView_title"
+            android:layout_margin="4dp"
+            android:clickable="false"
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="13sp"
+            android:textColor="#6c6c6c"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/recyclerView_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_margin="4dp"
+            android:textSize="13sp"
+            android:textColor="#6c6c6c"
+            />
+    </FrameLayout>
+
 
     <RelativeLayout
+        android:id="@+id/recyclerView_rl"
         android:layout_width="match_parent"
         android:background="@drawable/recyclerview_bg"
         android:layout_height="88dp">
@@ -35,8 +55,8 @@
                     android:src="@drawable/query_over_1_day"
                     android:layout_width="30dp"
                     android:layout_height="37dp"
-                    android:visibility="invisible"/>
-                
+                    android:visibility="invisible" />
+
                 <ImageView
                     android:id="@+id/recyclerView_header"
                     android:layout_gravity="center"

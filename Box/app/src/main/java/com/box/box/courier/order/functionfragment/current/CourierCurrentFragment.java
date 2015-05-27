@@ -23,8 +23,8 @@ public class CourierCurrentFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        currentThings = new CurrentThing[]{new CurrentThing("景苑7栋1单元10号柜子", R.drawable.coporation1, "顺风", "12345678901", "1232132332", "胡小丽"),
-                new CurrentThing("景苑7栋1单元10号柜子", R.drawable.coporation2, "中通", "12345678901", "213121", "胡晓利")};
+        currentThings = new CurrentThing[]{new CurrentThing("站点一",12, "景苑7栋1单元10号柜子", R.drawable.coporation1, "顺风", "12345678901", "1232132332", "胡小丽"),
+                new CurrentThing("站点二",10, "景苑7栋1单元10号柜子", R.drawable.coporation2, "中通", "12345678901", "213121", "胡晓利")};
         adapter = new CourierCurrentRecyclerAdapter(currentThings, getActivity());
     }
 

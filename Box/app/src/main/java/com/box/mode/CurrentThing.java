@@ -2,6 +2,8 @@ package com.box.mode;
 
 
 public class CurrentThing {
+    private String site;
+    private int num;
     private int headerId;
     private String name;
     private String number;
@@ -9,7 +11,9 @@ public class CurrentThing {
     private String phone;
     private String address;
 
-    public CurrentThing(String address, int headerId, String name, String number, String phone, String userName) {
+    public CurrentThing(String site, int num, String address, int headerId, String name, String number, String phone, String userName) {
+        this.site = site;
+        this.num = num;
         this.address = address;
         this.headerId = headerId;
         this.name = name;
@@ -24,6 +28,22 @@ public class CurrentThing {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public int getNum() {
+        return num;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public String getSite() {
+        return site;
+    }
+
+    public void setSite(String site) {
+        this.site = site;
     }
 
     public int getHeaderId() {
