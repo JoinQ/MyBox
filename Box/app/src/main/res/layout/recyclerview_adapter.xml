@@ -24,7 +24,7 @@
             android:id="@+id/recyclerView_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="right|center_vertical"
             android:gravity="center_vertical"
             android:visibility="gone"
             android:layout_margin="4dp"

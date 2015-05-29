@@ -60,6 +60,7 @@ public class CourierCurrentViewHolder extends BaseViewHolder<CurrentThing, NullP
         mtitlefl.setBackgroundResource(R.color.courier_current_title_background);
 
         mTitleText.setVisibility(View.VISIBLE);
+        mTitleText.setPadding(0,8,0,8);
         mtitlefl.setOnClickListener(this);
         mComeRight.setVisibility(View.VISIBLE);
         mPingLunBtn.setVisibility(View.INVISIBLE);
