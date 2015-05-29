@@ -93,6 +93,7 @@
     <orderEntry type="library" exported="" name="SocialSDK_Sina" level="project" />
     <orderEntry type="library" exported="" name="umeng_social_sdk" level="project" />
     <orderEntry type="library" exported="" name="fresco-0.3.0" level="project" />
+    <orderEntry type="library" exported="" name="core-3.0.0" level="project" />
     <orderEntry type="library" exported="" name="SocialSDK_renren_2" level="project" />
     <orderEntry type="library" exported="" name="SocialSDK_renren_1" level="project" />
     <orderEntry type="library" exported="" name="SocialSDK_QQZone_1" level="project" />
@@ -111,7 +112,7 @@
     <orderEntry type="library" exported="" name="materialish-progress-1.5" level="project" />
     <orderEntry type="library" exported="" name="umeng-update-v2.6.0.1" level="project" />
     <orderEntry type="library" exported="" name="SocialSDK_sms" level="project" />
-    <orderEntry type="library" exported="" name="analytics-5.5.2" level="project" />
+    <orderEntry type="library" exported="" name="analytics-5.5.3" level="project" />
     <orderEntry type="library" exported="" name="superrecyclerview-1.1.0" level="project" />
     <orderEntry type="module" module-name="SMSSDK" exported="" />
     <orderEntry type="module" module-name="jpagerView" exported="" />

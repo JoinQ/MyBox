@@ -3,18 +3,25 @@ package com.box.box.customer.exress.functionfragment.arrive;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.box.app.BoxActivity;
 import com.box.box.R;
 import com.box.box.customer.MainActivity;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.common.BitMatrix;
 
 public class ArrivedInfoActivity extends BoxActivity implements View.OnClickListener {
 
     private TextView arr_not_rec_tv_exception;
+    private ImageView arr_not_rec_iv_ywm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +38,13 @@ public class ArrivedInfoActivity extends BoxActivity implements View.OnClickList
     private void init() {
         arr_not_rec_tv_exception = (TextView) findViewById(R.id.arr_not_rec_tv_exception);
         arr_not_rec_tv_exception.setOnClickListener(this);
+        arr_not_rec_iv_ywm = (ImageView) findViewById(R.id.arr_not_rec_iv_ywm);
+
+        try {
+            arr_not_rec_iv_ywm.setImageBitmap(CreateOneDCode("123456789012"));
+        } catch (WriterException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -58,4 +72,27 @@ public class ArrivedInfoActivity extends BoxActivity implements View.OnClickList
                         }).show();
         }
     }
+
+
+    public Bitmap CreateOneDCode(String content) throws WriterException {
+        BitMatrix matrix = new MultiFormatWriter().encode(content,
+                BarcodeFormat.CODE_128, 500, 200);
+        int width = matrix.getWidth();
+        int height = matrix.getHeight();
+        int[] pixels = new int[width * height];
+        for (int y = 0; y < height; y++) {
+            for (int x = 0; x < width; x++) {
+                if (matrix.get(x, y)) {
+                    pixels[y * width + x] = 0xff000000;
+                }
+            }
+        }
+
+        Bitmap bitmap = Bitmap.createBitmap(width, height,
+                Bitmap.Config.ARGB_8888);
+        bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+        return bitmap;
+    }
+
+
 }

@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.box.app.BoxActivity;
 import com.box.app.MyApplication;
@@ -16,11 +17,14 @@ import com.box.mode.SettingThing;
 import com.box.widget.BaseRecyclerAdapter;
 import com.box.widget.SettingRecyclerAdapter;
 import com.umeng.update.UmengUpdateAgent;
+import com.umeng.update.UmengUpdateListener;
+import com.umeng.update.UpdateResponse;
+import com.umeng.update.UpdateStatus;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SettingActivity extends BoxActivity implements BaseRecyclerAdapter.OnRecyclerItemClickListener{
+public class SettingActivity extends BoxActivity implements BaseRecyclerAdapter.OnRecyclerItemClickListener {
     private RecyclerView recyclerView;
 
     private SettingRecyclerAdapter adapter;
@@ -72,6 +76,28 @@ public class SettingActivity extends BoxActivity implements BaseRecyclerAdapter.
                 break;
             case 1:
                 UmengUpdateAgent.forceUpdate(this);
+
+                UmengUpdateAgent.setUpdateListener(new UmengUpdateListener() {
+                    @Override
+                    public void onUpdateReturned(int updateStatus, UpdateResponse updateInfo) {
+                        switch (updateStatus) {
+                            case UpdateStatus.Yes: // has update
+                                UmengUpdateAgent.showUpdateDialog(SettingActivity.this, updateInfo);
+                                break;
+                            case UpdateStatus.No: // has no update
+                                Toast.makeText(SettingActivity.this, "没有更新", Toast.LENGTH_SHORT).show();
+                                break;
+                            case UpdateStatus.NoneWifi: // none wifi
+                                Toast.makeText(SettingActivity.this, "没有wifi连接， 只在wifi下更新", Toast.LENGTH_SHORT).show();
+                                break;
+                            case UpdateStatus.Timeout: // time out
+                                Toast.makeText(SettingActivity.this, "超时", Toast.LENGTH_SHORT).show();
+                                break;
+                        }
+                    }
+                });
+                UmengUpdateAgent.update(this);
+
                 break;
             case 2:
                 break;
