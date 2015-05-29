@@ -21,6 +21,7 @@ import com.google.zxing.common.BitMatrix;
 public class ArrivedInfoActivity extends BoxActivity implements View.OnClickListener {
 
     private TextView arr_not_rec_tv_exception;
+    private  TextView arr_not_rec_tv_ywm;
     private ImageView arr_not_rec_iv_ywm;
 
     @Override
@@ -38,10 +39,17 @@ public class ArrivedInfoActivity extends BoxActivity implements View.OnClickList
     private void init() {
         arr_not_rec_tv_exception = (TextView) findViewById(R.id.arr_not_rec_tv_exception);
         arr_not_rec_tv_exception.setOnClickListener(this);
+        arr_not_rec_tv_ywm = (TextView) findViewById(R.id.arr_not_rec_tv_ywm);
         arr_not_rec_iv_ywm = (ImageView) findViewById(R.id.arr_not_rec_iv_ywm);
 
+        String OneDCode = "123456789012";
+        char[] one = OneDCode.toCharArray();
         try {
-            arr_not_rec_iv_ywm.setImageBitmap(CreateOneDCode("123456789012"));
+            arr_not_rec_iv_ywm.setImageBitmap(CreateOneDCode(OneDCode));
+            for (int i=0;i<OneDCode.length();i++)
+            {
+                arr_not_rec_tv_ywm.setText(arr_not_rec_tv_ywm.getText().toString()+one[i]+"  ");
+            }
         } catch (WriterException e) {
             e.printStackTrace();
         }

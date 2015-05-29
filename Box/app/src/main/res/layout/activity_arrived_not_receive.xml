@@ -117,13 +117,20 @@
         <ImageView
             android:id="@+id/arr_not_rec_iv_ywm"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/arr_not_rec_tv_ywm"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrived_ywm" />
+            android:textColor="@android:color/black"
+            android:layout_gravity="center" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="8dp"
             android:text="请扫描此条形码" />
     </LinearLayout>
 
