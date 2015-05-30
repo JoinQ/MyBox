@@ -87,6 +87,18 @@
             android:name=".customer.me.function.SettingActivity"
             android:label="@string/title_activity_setting"
             android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/CourierMainTheme"
+            android:name=".courier.me.function.CourierMyInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/CourierMainTheme"
+            android:name=".courier.me.function.CourierRankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/CourierMainTheme"
+            android:name=".courier.me.function.CourierSettingActivity"
+            android:screenOrientation="portrait" />
         >
 
         <!-- ###################注册SDK使用的Activity###################### -->

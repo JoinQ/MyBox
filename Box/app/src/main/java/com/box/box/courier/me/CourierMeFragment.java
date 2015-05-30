@@ -2,6 +2,7 @@ package com.box.box.courier.me;
 
 import android.app.ActionBar;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,6 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.box.box.R;
+import com.box.box.courier.me.function.CourierMyInformationActivity;
+import com.box.box.courier.me.function.CourierRankActivity;
+import com.box.box.courier.me.function.CourierSettingActivity;
 import com.box.mode.MeListThing;
 import com.box.util.Utils;
 
@@ -23,10 +27,12 @@ import java.util.List;
 public class CourierMeFragment extends Fragment implements ListView.OnItemClickListener {
     private ListView listView;
     private List<MeListThing> list = new ArrayList<MeListThing>();
+    private Intent intent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        intent = new Intent();
         list.add(new MeListThing(R.drawable.courier_me_grzl, "个人信息", true));
         list.add(new MeListThing(R.drawable.courier_me_phb, "好评排行榜", true));
         list.add(new MeListThing(R.drawable.courier_me_wdfl, "我的福利", false));
@@ -55,6 +61,23 @@ public class CourierMeFragment extends Fragment implements ListView.OnItemClickL
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         if (!Utils.QuickClick.isQuickClick()) {
+            switch (i) {
+                case 0:
+                    intent.setClass(getActivity(), CourierMyInformationActivity.class);
+                    startActivity(intent);
+                    break;
+                case 1:
+                    intent.setClass(getActivity(), CourierRankActivity.class);
+                    startActivity(intent);
+                    break;
+                case 2:
+
+                    break;
+                case 3:
+                    intent.setClass(getActivity(), CourierSettingActivity.class);
+                    startActivity(intent);
+                    break;
+            }
         }
     }
 

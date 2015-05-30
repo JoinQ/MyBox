@@ -1,4 +1,4 @@
-package com.box.box.customer.me.function;
+package com.box.box.courier.me.function;
 
 import android.app.ActionBar;
 import android.content.Intent;
@@ -24,7 +24,7 @@ import com.umeng.update.UpdateStatus;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SettingActivity extends BoxActivity implements BaseRecyclerAdapter.OnRecyclerItemClickListener {
+public class CourierSettingActivity extends BoxActivity implements BaseRecyclerAdapter.OnRecyclerItemClickListener {
     private RecyclerView recyclerView;
 
     private SettingRecyclerAdapter adapter;
@@ -82,13 +82,13 @@ public class SettingActivity extends BoxActivity implements BaseRecyclerAdapter.
                     public void onUpdateReturned(int updateStatus, UpdateResponse updateInfo) {
                         switch (updateStatus) {
                             case UpdateStatus.Yes:
-                                UmengUpdateAgent.showUpdateDialog(SettingActivity.this, updateInfo);
+                                UmengUpdateAgent.showUpdateDialog(CourierSettingActivity.this, updateInfo);
                                 break;
                             case UpdateStatus.No:
-                                Toast.makeText(SettingActivity.this, "没有更新", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CourierSettingActivity.this, "没有更新", Toast.LENGTH_SHORT).show();
                                 break;
                             case UpdateStatus.Timeout:
-                                Toast.makeText(SettingActivity.this, "超时", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(CourierSettingActivity.this, "超时", Toast.LENGTH_SHORT).show();
                                 break;
                         }
                     }
@@ -102,7 +102,7 @@ public class SettingActivity extends BoxActivity implements BaseRecyclerAdapter.
                 break;
             case 4:
                 MyApplication.getInstance().exitAllActivity();
-                startActivity(new Intent(SettingActivity.this, LoginActivity.class));
+                startActivity(new Intent(CourierSettingActivity.this, LoginActivity.class));
                 break;
             case 5:
                 System.exit(0);

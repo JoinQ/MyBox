@@ -29,12 +29,13 @@ import java.util.List;
 
 public class MeFragmnet extends Fragment implements View.OnClickListener, ListView.OnItemClickListener {
     private ListView listView;
-
     private List<MeListThing> list = new ArrayList<MeListThing>();
+    private Intent intent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        intent = new Intent();
         list.add(new MeListThing(R.drawable.me_info, "个人信息", true));
         list.add(new MeListThing(R.drawable.me_logistics, "我的物流", true));
         list.add(new MeListThing(R.drawable.me_application, "应用中心", false));
@@ -71,10 +72,12 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
         if (!Utils.QuickClick.isQuickClick()) {
             switch (i) {
                 case 0:
-                    startActivity(new Intent(MeFragmnet.this.getActivity(), MyInformationActivity.class));
+                    intent.setClass(getActivity(), MyInformationActivity.class);
+                    startActivity(intent);
                     break;
                 case 1:
-                    startActivity(new Intent(MeFragmnet.this.getActivity(), QueryInfoActivity.class));
+                    intent.setClass(getActivity(), QueryInfoActivity.class);
+                    startActivity(intent);
                     break;
                 case 2:
                     break;
@@ -82,10 +85,12 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
                     new ShareDialogFragment().show(getActivity().getFragmentManager(), "share");
                     break;
                 case 4:
-                    startActivity(new Intent(MeFragmnet.this.getActivity(), RankActivity.class));
+                    intent.setClass(getActivity(), RankActivity.class);
+                    startActivity(intent);
                     break;
                 case 5:
-                    startActivity(new Intent(MeFragmnet.this.getActivity(), SettingActivity.class));
+                    intent.setClass(getActivity(), SettingActivity.class);
+                    startActivity(intent);
                     break;
             }
         }
@@ -151,5 +156,5 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
             private TextView mNameText;
             private ImageView mHeadImage;
         }
-}
+    }
 }

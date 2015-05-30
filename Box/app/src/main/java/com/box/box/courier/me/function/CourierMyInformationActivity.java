@@ -1,4 +1,4 @@
-package com.box.box.customer.me.function;
+package com.box.box.courier.me.function;
 
 import android.app.ActionBar;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import com.box.app.BoxActivity;
 import com.box.box.R;
 import com.box.util.Utils;
 
-public class MyInformationActivity extends BoxActivity {
+public class CourierMyInformationActivity extends BoxActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
