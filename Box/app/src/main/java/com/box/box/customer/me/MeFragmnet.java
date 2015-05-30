@@ -151,5 +151,5 @@ public class MeFragmnet extends Fragment implements View.OnClickListener, ListVi
             private TextView mNameText;
             private ImageView mHeadImage;
         }
-    }
+}
 }
