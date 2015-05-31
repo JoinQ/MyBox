@@ -18,6 +18,17 @@
     <string name="wantsend_address"><font color="red">*</font><font color="black">收件地址：</font></string>
     <string name="wantsend_pay"><font color="red">*</font><font color="black">付款方式：</font></string>
 
+    <string name="sendmepay_order_info"><font color="red">*</font><font color="black">订单信息：</font></string>
+    <string name="sendmepay_order_jjr"><font color="red">*</font><font color="black">寄件人：</font></string>
+    <string name="sendmepay_order_sjr"><font color="red">*</font><font color="black">收件人：</font></string>
+    <string name="sendmepay_order_phone"><font color="red">*</font><font color="black">电话：</font></string>
+    <string name="sendmepay_order_boxid"><font color="red">*</font><font color="black">柜子编号：</font></string>
+    <string name="sendmepay_order_address"><font color="red">*</font><font color="black">收件地址：</font></string>
+    <string name="sendmepay_order_pay"><font color="red">*</font><font color="black">付款方式：</font></string>
+    <string name="sendmepay_order_weight"><font color="red">*</font><font color="black">重量：</font></string>
+    <string name="sendmepay_order_money"><font color="red">*运费总价：</font></string>
+
+
 
     <string name="recycleradapter_time">到达时间：%1$s</string>
     <string name="recycleradapter_place">到达地址：%1$s</string>
@@ -40,6 +51,10 @@
     <string name="title_activity_setting">SettingActivity</string>
     <string name="title_activity_rank">RankActivity</string>
     <string name="title_activity_want_send">WantSendActivity</string>
+    <string name="title_activity_sendme_pay">SendmePayActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 
 

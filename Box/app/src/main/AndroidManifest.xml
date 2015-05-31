@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.box.box">
+    package="com.box.box" >
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -29,12 +29,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/MainTheme">
+        android:theme="@style/MainTheme" >
         <activity
             android:name="com.box.launch.LaunchActivity"
             android:label="@string/app_name"
-            android:theme="@style/launchTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/launchTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,8 +43,8 @@
         </activity>
         <activity
             android:name="com.box.launch.LoginActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name="com.box.launch.RegisterActivity"
             android:screenOrientation="portrait" />
@@ -55,9 +55,9 @@
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:windowSoftInputMode="stateHidden|adjustResize"
-            android:screenOrientation="portrait" />
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".customer.exress.functionfragment.query.QueryInfoActivity"
             android:label="@string/title_activity_express_information"
@@ -69,8 +69,8 @@
         <activity
             android:name=".courier.CourierMainActivity"
             android:label="DeliverMainActivity"
-            android:theme="@style/CourierMainTheme"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme" />
         <activity
             android:name=".customer.exress.functionfragment.arrive.ArrivingInfoActivity"
             android:label="@string/title_activity_arriving_info"
@@ -88,17 +88,17 @@
             android:label="@string/title_activity_setting"
             android:screenOrientation="portrait" />
         <activity
-            android:theme="@style/CourierMainTheme"
             android:name=".courier.me.function.CourierMyInformationActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme" />
         <activity
-            android:theme="@style/CourierMainTheme"
             android:name=".courier.me.function.CourierRankActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme" />
         <activity
-            android:theme="@style/CourierMainTheme"
             android:name=".courier.me.function.CourierSettingActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme" />
         >
 
         <!-- ###################注册SDK使用的Activity###################### -->
@@ -116,7 +116,7 @@
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
             android:noHistory="true"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -137,8 +137,8 @@
 
         <activity
             android:name="com.umeng.update.UpdateDialogActivity"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- ###################添加UmengAppkey###################### -->
         <meta-data
@@ -151,7 +151,11 @@
         <activity
             android:name=".customer.exress.functionfragment.sendme.WantSendActivity"
             android:label="@string/title_activity_want_send"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".customer.exress.functionfragment.sendme.SendmePayActivity"
+            android:label="@string/title_activity_sendme_pay" >
+        </activity>
     </application>
 
 </manifest>
