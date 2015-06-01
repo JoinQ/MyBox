@@ -27,6 +27,8 @@
     <color name="arrived_card_password">#e7211b</color>
 
     <color name="courier_search_spinner_background">#f6f6f6</color>
+    <color name="courier_search_list_delete_background">#4ddd3a</color>
+
     <color name="courier_current_title_background">#9ad4f9</color>
 
     <color name="my_info_view">#cfcfcf</color>
