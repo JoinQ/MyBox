@@ -154,7 +154,20 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".customer.exress.functionfragment.sendme.SendmePayActivity"
-            android:label="@string/title_activity_sendme_pay" >
+            android:label="@string/title_activity_sendme_pay"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".courier.search.CourierGetExpressActivity"
+            android:label="@string/title_activity_courier_get_express"
+            android:theme="@style/CourierMainTheme"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".courier.search.CourierFeedbackActivity"
+            android:label="@string/title_activity_courier_feedback"
+            android:theme="@style/CourierMainTheme"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

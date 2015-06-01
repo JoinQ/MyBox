@@ -1,9 +1,9 @@
 package com.box.box.courier.search;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -107,8 +107,8 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-                Log.i("点击","点击");
                 Toast.makeText(CourierSearchFragment.this.getActivity(), "点击  " + position, Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(CourierSearchFragment.this.getActivity(),CourierGetExpressActivity.class));
             }
         });
 
@@ -135,13 +135,10 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
     //滑动删除之后的回调方法
     @Override
     public void removeItem(RemoveDirection direction, int position) {
-//        listAdapter.remove(listAdapter.getItem(position));
         switch (direction) {
-            case RIGHT:
-                Toast.makeText(CourierSearchFragment.this.getActivity(), "向右  " + position, Toast.LENGTH_SHORT).show();
-                break;
             case LEFT:
                 Toast.makeText(CourierSearchFragment.this.getActivity(), "向左  " + position, Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(CourierSearchFragment.this.getActivity(),CourierFeedbackActivity.class));
                 break;
 
             default:
