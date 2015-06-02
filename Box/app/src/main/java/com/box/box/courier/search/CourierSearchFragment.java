@@ -119,7 +119,6 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
             }
         });
 
-
     }
 
 
