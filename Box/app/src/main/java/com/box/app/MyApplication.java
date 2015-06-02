@@ -2,6 +2,8 @@ package com.box.app;
 
 import android.app.Activity;
 import android.app.Application;
+
+import com.android.http.RequestManager;
 import com.box.util.Utils;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
@@ -24,6 +26,7 @@ public class MyApplication extends Application {
         Utils.initialize(this);
         SMSSDK.initSDK(this, "722fca824f74", "8bc7a3d388921575fa132f65da3cdf8e");
         Fresco.initialize(this);
+        RequestManager.getInstance().init(getApplicationContext());
     }
 
     public void addActivity(Activity activty) {

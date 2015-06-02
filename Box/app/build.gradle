@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
 }
 
 dependencies {
@@ -47,4 +52,7 @@ dependencies {
     compile 'com.android.support:support-v4:22.1.1'
     compile project(':jpagerView')
     compile files('libs/core-3.0.0.jar')
+    compile files('libs/JVolly.jar')
+    compile 'org.jsoup:jsoup:1.8.2'
+    compile 'com.alibaba:fastjson:1.2.6'
 }

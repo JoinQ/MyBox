@@ -1,11 +1,8 @@
 package com.box.launch;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +15,11 @@ import com.box.app.BoxActivity;
 import com.box.box.R;
 import com.box.box.courier.CourierMainActivity;
 import com.box.box.customer.MainActivity;
+import com.box.mode.LoginThing;
+import com.box.util.Constant;
+import com.box.util.OnDataCallback;
+import com.box.util.RequestNetWork;
+import com.box.util.Utils;
 
 import java.util.HashMap;
 
@@ -29,12 +31,12 @@ import cn.smssdk.gui.RegisterPage;
 import static com.mob.tools.utils.R.getBitmapRes;
 
 public class LoginActivity extends BoxActivity implements View.OnClickListener {
-    private Button login_bt_login;
-    private EditText login_et_id;
-    private EditText login_et_password;
-    private Button login_bt_register;
-    private TextView login_tv_forget;
-    private ImageView login_iv_head;
+    private Button loginBtn;
+    private EditText userEdt;
+    private EditText passwordEdt;
+    private Button registerBtn;
+    private TextView forgetPassword;
+    private ImageView headImg;
     private LinearLayout login_return;
 
     private FrameLayout frameLayoutBg;
@@ -49,17 +51,17 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
     private void initView() {
         frameLayoutBg = (FrameLayout) findViewById(R.id.login_frame);
         login_return = (LinearLayout) findViewById(R.id.login_ll_return);
-        login_bt_login = (Button) findViewById(R.id.login_bt_login);
-        login_et_id = (EditText) findViewById(R.id.login_et_id);
-        login_et_password = (EditText) findViewById(R.id.login_et_password);
-        login_tv_forget = (TextView) findViewById(R.id.login_tv_forget);
-        login_iv_head = (ImageView) findViewById(R.id.login_iv_head);
-        login_bt_register = (Button) findViewById(R.id.login_bt_register);
+        loginBtn = (Button) findViewById(R.id.login_bt_login);
+        userEdt = (EditText) findViewById(R.id.login_et_id);
+        passwordEdt = (EditText) findViewById(R.id.login_et_password);
+        forgetPassword = (TextView) findViewById(R.id.login_tv_forget);
+        headImg = (ImageView) findViewById(R.id.login_iv_head);
+        registerBtn = (Button) findViewById(R.id.login_bt_register);
 
         login_return.setOnClickListener(this);
-        login_bt_login.setOnClickListener(this); //登陆
-        login_bt_register.setOnClickListener(this); //忘记密码
-        login_tv_forget.setOnClickListener(this); //注册
+        loginBtn.setOnClickListener(this); //登陆
+        registerBtn.setOnClickListener(this); //忘记密码
+        forgetPassword.setOnClickListener(this); //注册
         login_return.destroyDrawingCache();
     }
 
@@ -71,15 +73,43 @@ public class LoginActivity extends BoxActivity implements View.OnClickListener {
                 finish();
                 break;
             case R.id.login_bt_login:
-//                if (login_et_id.getText().toString() != null && login_et_id.getText().toString().length() == 11 && login_et_password.getText().toString() != null && login_et_password.getText().toString().length() != 0)
-//                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
-//                else if (login_et_id.getText().toString() == null || login_et_id.getText().toString().length() != 11) {
-//                    Utils.Toast("账号错误");
-//                } else if (login_et_password.getText().toString() == null || login_et_password.getText().toString().length() == 0) {
-//                    Utils.Toast("密码不能为空");
-//                }
-                startActivity(new Intent(LoginActivity.this, CourierMainActivity.class));
-                finish();
+                if (!TextUtils.isEmpty(userEdt.getText().toString()) && !TextUtils.isEmpty(passwordEdt.getText().toString())) {
+                    loginBtn.setClickable(false);
+                    RequestNetWork.loginRequest(userEdt.getText().toString(), passwordEdt.getText().toString(), new OnDataCallback<LoginThing>() {
+                        @Override
+                        public void callback(LoginThing... list) {
+                            loginBtn.setClickable(true);
+                            if (list[0].getType() == Constant.ISCUSTOMER) {
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                            } else {
+                                startActivity(new Intent(LoginActivity.this, CourierMainActivity.class));
+                            }
+                            finish();
+                        }
+
+                        @Override
+                        public void error(String info) {
+                            loginBtn.setClickable(true);
+                            startActivity(new Intent(LoginActivity.this, CourierMainActivity.class));
+                            finish();
+                        }
+                    });
+                } else if (TextUtils.isEmpty(userEdt.getText().toString()) && TextUtils.isEmpty(passwordEdt.getText().toString())){
+                    Utils.Toast("用户名和密码不能为空！");
+                    loginBtn.setClickable(true);
+                    startActivity(new Intent(LoginActivity.this, CourierMainActivity.class));
+                    finish();
+                } else if (TextUtils.isEmpty(userEdt.getText().toString()) && !TextUtils.isEmpty(passwordEdt.getText().toString())) {
+                    Utils.Toast("密码不能为空！");
+                    loginBtn.setClickable(true);
+                    startActivity(new Intent(LoginActivity.this, CourierMainActivity.class));
+                    finish();
+                } else {
+                    Utils.Toast("用户名不能为空！");
+                    loginBtn.setClickable(true);
+                    startActivity(new Intent(LoginActivity.this, CourierMainActivity.class));
+                    finish();
+                }
                 break;
             case R.id.login_bt_register:
                 RegisterPage registerPage = new RegisterPage(LoginActivity.this);
