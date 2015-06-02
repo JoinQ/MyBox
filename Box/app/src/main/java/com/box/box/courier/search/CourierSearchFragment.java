@@ -42,6 +42,8 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
     private List<Map<String, Object>> listItems;
     private List<String> dataSourceList = new ArrayList<String>();
 
+    private TextView item_state;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +72,10 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
             map.put("add_to", "目的地址：重庆邮电大学10栋");
             map.put("type", "付款类型：到付");
             map.put("time", "8:00");
-            map.put("state", true);
+            if (i % 2 == 0)
+                map.put("state", true);
+            else
+                map.put("state", false);
             listItems.add(map);
         }
         return listItems;
@@ -106,12 +111,13 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
         slideCutListView.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(CourierSearchFragment.this.getActivity(), "点击  " + position, Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(CourierSearchFragment.this.getActivity(),CourierGetExpressActivity.class));
+                item_state = (TextView) view.findViewById(R.id.list_courier_state);
+                if (item_state.getVisibility() == View.GONE)
+                    startActivity(new Intent(CourierSearchFragment.this.getActivity(), CourierGetExpressActivity.class));
             }
         });
-
 
 
     }
@@ -138,7 +144,7 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
         switch (direction) {
             case LEFT:
                 Toast.makeText(CourierSearchFragment.this.getActivity(), "向左  " + position, Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(CourierSearchFragment.this.getActivity(),CourierFeedbackActivity.class));
+                startActivity(new Intent(CourierSearchFragment.this.getActivity(), CourierFeedbackActivity.class));
                 break;
 
             default:
