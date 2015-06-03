@@ -4,6 +4,7 @@ import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -140,16 +141,21 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
     //滑动删除之后的回调方法
     @Override
     public void removeItem(RemoveDirection direction, int position) {
-        switch (direction) {
-            case LEFT:
-                Toast.makeText(CourierSearchFragment.this.getActivity(), "向左  " + position, Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(CourierSearchFragment.this.getActivity(), CourierFeedbackActivity.class));
-                break;
+//        View v = ((View) listAdapter.getItem(position)).inflate(CourierSearchFragment.this.getActivity(), R.layout.listview_courier_search_adapter, null);
+//        item_state = (TextView) (v).findViewById(R.id.list_courier_state);
+//        Log.i("item_state", item_state.getVisibility() + "");
+        if (listItems.get(position).get("state").toString().equals("true"))
+            switch (direction) {
+                case LEFT:
+                    Toast.makeText(CourierSearchFragment.this.getActivity(), "向左  " + position, Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(CourierSearchFragment.this.getActivity(), CourierFeedbackActivity.class));
+                    break;
 
-            default:
-                break;
-        }
-
+                default:
+                    break;
+            }
+        else
+            Utils.Toast("请先接受订单");
     }
 
 }
