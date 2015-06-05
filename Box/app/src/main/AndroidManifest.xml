@@ -160,14 +160,18 @@
         <activity
             android:name=".courier.search.CourierGetExpressActivity"
             android:label="@string/title_activity_courier_get_express"
-            android:theme="@style/CourierMainTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme" >
         </activity>
         <activity
             android:name=".courier.search.CourierFeedbackActivity"
             android:label="@string/title_activity_courier_feedback"
-            android:theme="@style/CourierMainTheme"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme" >
+        </activity>
+        <activity
+            android:name=".customer.me.function.feedbackActivity"
+            android:label="@string/title_activity_feedback" >
         </activity>
     </application>
 

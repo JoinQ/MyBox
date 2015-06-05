@@ -58,6 +58,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_courier_get_express">CourierGetExpress</string>
     <string name="title_activity_courier_feedback">CourierFeedbackActivity</string>
+    <string name="title_activity_feedback">feedbackActivity</string>
 
 
 

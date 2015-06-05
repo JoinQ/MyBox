@@ -97,6 +97,7 @@ public class SettingActivity extends BoxActivity implements BaseRecyclerAdapter.
 
                 break;
             case 2:
+                startActivity(new Intent(SettingActivity.this,feedbackActivity.class));
                 break;
             case 3:
                 break;
