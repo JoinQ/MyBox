@@ -3,6 +3,7 @@ package com.box.box.courier.search;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -25,6 +26,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import com.box.view.SlideCutListView.RemoveDirection;
 import com.box.widget.SearchListAdapter;
@@ -44,6 +47,8 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
     private List<String> dataSourceList = new ArrayList<String>();
 
     private TextView item_state;
+
+    Timer timer = new Timer();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -144,17 +149,24 @@ public class CourierSearchFragment extends Fragment implements AdapterView.OnIte
 //        View v = ((View) listAdapter.getItem(position)).inflate(CourierSearchFragment.this.getActivity(), R.layout.listview_courier_search_adapter, null);
 //        item_state = (TextView) (v).findViewById(R.id.list_courier_state);
 //        Log.i("item_state", item_state.getVisibility() + "");
-        if (listItems.get(position).get("state").toString().equals("true"))
-            switch (direction) {
-                case LEFT:
-                    Toast.makeText(CourierSearchFragment.this.getActivity(), "向左  " + position, Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CourierSearchFragment.this.getActivity(), CourierFeedbackActivity.class));
-                    break;
+        if (listItems.get(position).get("state").toString().equals("true")) {
 
-                default:
-                    break;
+            try {
+                Thread.currentThread().sleep(500);
+                switch (direction) {
+                    case LEFT:
+                        Toast.makeText(CourierSearchFragment.this.getActivity(), "向左  " + position, Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(CourierSearchFragment.this.getActivity(), CourierFeedbackActivity.class));
+                        break;
+
+                    default:
+                        break;
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        else
+
+        } else
             Utils.Toast("请先接受订单");
     }
 
