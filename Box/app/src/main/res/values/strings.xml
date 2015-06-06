@@ -29,6 +29,15 @@
     <string name="sendmepay_order_weight"><font color="red">*</font><font color="black">重量：</font></string>
     <string name="sendmepay_order_money"><font color="red">*运费总价：</font></string>
 
+    <string name="edit_information_name"><font color="red">*</font><font color="black">昵称：</font></string>
+    <string name="edit_information_nowplace"><font color="red">*</font><font color="black">详细地址：</font></string>
+    <string name="edit_information_code"><font color="black">邮编：</font></string>
+    <string name="edit_information_birthday"><font color="black">生日：</font></string>
+    <string name="edit_information_gender"><font color="red">*</font><font color="black">性别：</font></string>
+    <string name="edit_information_email"><font color="black">邮箱：</font></string>
+    <string name="edit_information_about"><font color="black">个人说明：</font></string>
+
+
 
 
     <string name="recycleradapter_time">到达时间：%1$s</string>
@@ -59,6 +68,7 @@
     <string name="title_activity_courier_get_express">CourierGetExpress</string>
     <string name="title_activity_courier_feedback">CourierFeedbackActivity</string>
     <string name="title_activity_feedback">feedbackActivity</string>
+    <string name="title_activity_edit_information">EditInformationActivity</string>
 
 
 

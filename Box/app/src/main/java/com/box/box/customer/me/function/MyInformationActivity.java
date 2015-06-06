@@ -1,6 +1,7 @@
 package com.box.box.customer.me.function;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,6 +29,7 @@ public class MyInformationActivity extends BoxActivity {
                 finish();
                 return true;
             case R.id.action_editting:
+                startActivity(new Intent(MyInformationActivity.this,EditInformationActivity.class));
                 Utils.Toast("编辑");
                 break;
             default:

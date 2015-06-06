@@ -173,6 +173,10 @@
             android:name=".customer.me.function.feedbackActivity"
             android:label="@string/title_activity_feedback" >
         </activity>
+        <activity
+            android:name=".customer.me.function.EditInformationActivity"
+            android:label="@string/title_activity_edit_information" >
+        </activity>
     </application>
 
 </manifest>
