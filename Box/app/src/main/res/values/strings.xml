@@ -14,7 +14,7 @@
     <string name="wantsend_jjr"><font color="red">*</font><font color="black">寄件人：</font></string>
     <string name="wantsend_sjr"><font color="red">*</font><font color="black">收件人：</font></string>
     <string name="wantsend_phone"><font color="red">*</font><font color="black">电话：</font></string>
-    <string name="wantsend_boxid"><font color="red">*</font><font color="black">柜子编号：</font></string>
+    <string name="wantsend_boxid"><font color="red">*</font><font color="black">寄件地址：</font></string>
     <string name="wantsend_address"><font color="red">*</font><font color="black">收件地址：</font></string>
     <string name="wantsend_pay"><font color="red">*</font><font color="black">付款方式：</font></string>
     <string name="wantsend_weight"><font color="red">*</font><font color="black">重量：</font></string>
@@ -23,7 +23,7 @@
     <string name="sendmepay_order_jjr"><font color="red">*</font><font color="black">寄件人：</font></string>
     <string name="sendmepay_order_sjr"><font color="red">*</font><font color="black">收件人：</font></string>
     <string name="sendmepay_order_phone"><font color="red">*</font><font color="black">电话：</font></string>
-    <string name="sendmepay_order_boxid"><font color="red">*</font><font color="black">柜子编号：</font></string>
+    <string name="sendmepay_order_boxid"><font color="red">*</font><font color="black">寄件地址：</font></string>
     <string name="sendmepay_order_address"><font color="red">*</font><font color="black">收件地址：</font></string>
     <string name="sendmepay_order_pay"><font color="red">*</font><font color="black">付款方式：</font></string>
     <string name="sendmepay_order_weight"><font color="red">*</font><font color="black">重量：</font></string>
