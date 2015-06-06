@@ -36,7 +36,8 @@
     <string name="edit_information_gender"><font color="red">*</font><font color="black">性别：</font></string>
     <string name="edit_information_email"><font color="black">邮箱：</font></string>
     <string name="edit_information_about"><font color="black">个人说明：</font></string>
-
+    <string name="edit_information_phone"><font color="red">*</font><font color="black">联系电话：</font></string>
+    <string name="edit_information_com"><font color="red">*</font><font color="black">所属公司：</font></string>
 
 
 
@@ -69,6 +70,7 @@
     <string name="title_activity_courier_feedback">CourierFeedbackActivity</string>
     <string name="title_activity_feedback">feedbackActivity</string>
     <string name="title_activity_edit_information">EditInformationActivity</string>
+    <string name="title_activity_edit_courier_information">EditCourierInformationActivity</string>
 
 
 

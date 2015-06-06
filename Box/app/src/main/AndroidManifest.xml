@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.box.box" >
+    package="com.box.box">
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -29,12 +29,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/MainTheme" >
+        android:theme="@style/MainTheme">
         <activity
             android:name="com.box.launch.LaunchActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/launchTheme" >
+            android:theme="@style/launchTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -116,7 +116,7 @@
             android:name="com.tencent.tauth.AuthActivity"
             android:launchMode="singleTask"
             android:noHistory="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -155,28 +155,30 @@
         <activity
             android:name=".customer.exress.functionfragment.sendme.SendmePayActivity"
             android:label="@string/title_activity_sendme_pay"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".courier.search.CourierGetExpressActivity"
             android:label="@string/title_activity_courier_get_express"
             android:screenOrientation="portrait"
-            android:theme="@style/CourierMainTheme" >
-        </activity>
+            android:theme="@style/CourierMainTheme"></activity>
         <activity
             android:name=".courier.search.CourierFeedbackActivity"
             android:label="@string/title_activity_courier_feedback"
             android:screenOrientation="portrait"
-            android:theme="@style/CourierMainTheme" >
-        </activity>
+            android:theme="@style/CourierMainTheme"></activity>
         <activity
             android:name=".customer.me.function.feedbackActivity"
-            android:label="@string/title_activity_feedback" >
-        </activity>
+            android:label="@string/title_activity_feedback"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".customer.me.function.EditInformationActivity"
-            android:label="@string/title_activity_edit_information" >
-        </activity>
+            android:label="@string/title_activity_edit_information"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".courier.me.function.EditCourierInformationActivity"
+            android:label="@string/title_activity_edit_courier_information"
+            android:theme="@style/CourierMainTheme"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
