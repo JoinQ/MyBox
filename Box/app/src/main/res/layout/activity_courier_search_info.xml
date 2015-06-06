@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroud"
+    tools:context="com.box.box.courier.order.CourierOrderInfoActivity">
+
+    <LinearLayout
+        android:id="@+id/query_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/courier_searchinfo_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_bg"
+            android:drawableStart="@drawable/search"
+            android:hint="输入电话或用户名查询寄件人"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#d9dadf" />
+    </LinearLayout>
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView xmlns:recycler="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/courier_searchinfo_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        recycler:layout_empty="@null"
+        recycler:layout_moreProgress="@layout/view_progress"
+        recycler:layout_progress="@layout/view_progress"
+        recycler:scrollbarStyle="insideInset" />
+
+</LinearLayout>

@@ -3,24 +3,25 @@ package com.box.widget;
 import android.content.Context;
 import android.view.ViewGroup;
 
-import com.box.mode.HistoryThing;
+import com.box.mode.SiteThing;
 
-public class CourierHistoryRecyclerAdapter extends BaseRecyclerAdapter<HistoryThing> {
+import java.text.ParseException;
 
+public class CourierSiteRecyclerAdapter extends BaseRecyclerAdapter<SiteThing> {
     private BaseViewHolder myViewHolder;
 
-    public CourierHistoryRecyclerAdapter(HistoryThing[] things, Context context) {
+    public CourierSiteRecyclerAdapter(SiteThing[] things, Context context) {
         super(things, context);
     }
 
     @Override
     public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
-        myViewHolder = new CourierHistoryViewHolder(parent);
+        myViewHolder = new CourierSiteViewHolder(parent);
         return myViewHolder;
     }
 
     @Override
-    public void OnBindViewHolder(BaseViewHolder holder, int position) {
+    public void OnBindViewHolder(BaseViewHolder holder, int position) throws ParseException {
         holder.itemView.setId(position);
         holder.itemView.setTag("cao");
         holder.setFirstData(getItem(position), false);

@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.box.mode.QueryingGThing;
 import com.box.mode.Things;
 
 import java.text.ParseException;

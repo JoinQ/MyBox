@@ -12,11 +12,9 @@ import android.view.View;
 import com.box.app.BoxActivity;
 import com.box.box.R;
 import com.box.box.customer.exress.ExpressFragmnet;
-import com.box.box.customer.exress.functionfragment.sendme.SendmePayActivity;
 import com.box.box.customer.market.MarketFragment;
 import com.box.box.customer.me.MeFragmnet;
 import com.box.launch.LoginActivity;
-import com.box.util.Utils;
 import com.box.view.Tab;
 import com.umeng.update.UmengUpdateAgent;
 
@@ -144,10 +142,7 @@ public class MainActivity extends BoxActivity implements View.OnClickListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.user:
-                //用户数据
-                //登陆or支付信息！！！！！！！！！
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
-//                startActivity(new Intent(MainActivity.this, SendmePayActivity.class));
                 finish();
                 return true;
         }

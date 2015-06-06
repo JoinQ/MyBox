@@ -8,12 +8,10 @@ import com.box.mode.QueryInfoThing;
 
 public class QueryInfoRecyclerAdapter extends BaseRecyclerAdapter<QueryInfoThing> {
     private BaseViewHolder myViewHolder;
-    private QueryInfoThing[] arry;
     private boolean isfirstitem = true;
 
     public QueryInfoRecyclerAdapter(QueryInfoThing[] arry, Context context) {
         super(arry, context);
-        this.arry = arry;
     }
 
     @Override
@@ -26,7 +24,7 @@ public class QueryInfoRecyclerAdapter extends BaseRecyclerAdapter<QueryInfoThing
     public void OnBindViewHolder(BaseViewHolder holder, int position) {
         holder.itemView.setId(position);
         holder.itemView.setTag("cao");
-        holder.setFirstData(arry[position], isfirstitem);
+        holder.setFirstData(getItem(position), isfirstitem);
         isfirstitem = false;
     }
 }

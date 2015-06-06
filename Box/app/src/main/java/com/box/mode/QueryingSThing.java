@@ -4,16 +4,16 @@ public class QueryingSThing {
     private String number;
     private int headImgId;
     private String name;
-    private String phone;
+    private String idNumber;
     private String time;
     private String state;
     private boolean isOverday = false;
 
-    public QueryingSThing(String number, int headImgId, String name, String phone, String time, String state, boolean isOverday) {
+    public QueryingSThing(String number, int headImgId, String name, String idNumber, String time, String state, boolean isOverday) {
         this.number = number;
         this.headImgId = headImgId;
         this.name = name;
-        this.phone = phone;
+        this.idNumber = idNumber;
         this.time = time;
         this.state = state;
         this.isOverday = isOverday;
@@ -43,12 +43,12 @@ public class QueryingSThing {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getIdNumber() {
+        return idNumber;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
     }
 
     public String getTime() {
@@ -71,7 +71,7 @@ public class QueryingSThing {
         return isOverday;
     }
 
-    public void setOverday(boolean isOverday) {
+    public void setIsOverday(boolean isOverday) {
         this.isOverday = isOverday;
     }
 }

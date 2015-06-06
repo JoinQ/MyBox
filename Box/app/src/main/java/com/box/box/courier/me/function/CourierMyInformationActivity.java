@@ -1,7 +1,6 @@
 package com.box.box.courier.me.function;
 
 import android.app.ActionBar;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -9,8 +8,6 @@ import android.view.MenuItem;
 
 import com.box.app.BoxActivity;
 import com.box.box.R;
-import com.box.box.customer.me.function.EditInformationActivity;
-import com.box.box.customer.me.function.MyInformationActivity;
 import com.box.util.Utils;
 
 public class CourierMyInformationActivity extends BoxActivity {
@@ -31,7 +28,6 @@ public class CourierMyInformationActivity extends BoxActivity {
                 finish();
                 return true;
             case R.id.action_editting:
-                startActivity(new Intent(CourierMyInformationActivity.this,EditCourierInformationActivity.class));
                 Utils.Toast("编辑");
                 break;
             default:

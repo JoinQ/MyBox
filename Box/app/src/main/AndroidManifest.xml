@@ -99,6 +99,26 @@
             android:name=".courier.me.function.CourierSettingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CourierMainTheme" />
+        <activity
+            android:name=".courier.order.CourierOrderInfoActivity"
+            android:label="@string/title_activity_courier_order_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme"/>
+        <activity
+            android:name=".courier.search.CourierSearchInfoActivity"
+            android:label="@string/title_activity_courier_search_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme"/>
+        <activity
+            android:name=".courier.search.CourierSearchSendInfoActivity"
+            android:label="@string/title_activity_courier_serchsend_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme"/>
+        <activity
+            android:name=".courier.order.CourierOrderSendInfoActivity"
+            android:label="@string/title_activity_courier_ordersend_info"
+            android:screenOrientation="portrait"
+            android:theme="@style/CourierMainTheme"/>
         >
 
         <!-- ###################注册SDK使用的Activity###################### -->
@@ -153,31 +173,12 @@
             android:label="@string/title_activity_want_send"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".customer.exress.functionfragment.sendme.SendmePayActivity"
+            android:name=".customer.exress.functionfragment.sendme.SendmeInfoActivity"
             android:label="@string/title_activity_sendme_pay"
             android:screenOrientation="portrait"></activity>
         <activity
-            android:name=".courier.search.CourierGetExpressActivity"
-            android:label="@string/title_activity_courier_get_express"
-            android:screenOrientation="portrait"
-            android:theme="@style/CourierMainTheme"></activity>
-        <activity
-            android:name=".courier.search.CourierFeedbackActivity"
-            android:label="@string/title_activity_courier_feedback"
-            android:screenOrientation="portrait"
-            android:theme="@style/CourierMainTheme"></activity>
-        <activity
             android:name=".customer.me.function.feedbackActivity"
             android:label="@string/title_activity_feedback"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".customer.me.function.EditInformationActivity"
-            android:label="@string/title_activity_edit_information"
-            android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".courier.me.function.EditCourierInformationActivity"
-            android:label="@string/title_activity_edit_courier_information"
-            android:theme="@style/CourierMainTheme"
             android:screenOrientation="portrait"></activity>
     </application>
 

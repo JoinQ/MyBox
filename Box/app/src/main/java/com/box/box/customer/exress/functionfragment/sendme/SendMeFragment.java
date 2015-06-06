@@ -24,13 +24,13 @@ import com.box.widget.BaseRecyclerAdapter;
 import com.box.widget.SendMeRecyclerAdapter;
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
 
-public class SendMeFragment extends Fragment implements View.OnClickListener{
+public class SendMeFragment extends Fragment implements View.OnClickListener, BaseRecyclerAdapter.OnRecyclerItemClickListener {
 
     private SuperRecyclerView recyclerView;
     private Things things;
     private SendMeRecyclerAdapter adapter;
 
-    private FrameLayout sendme_fl_wyjj;
+    private FrameLayout sendmeBtn;
 
     private View root;
     private LinearLayout headerView;
@@ -50,15 +50,14 @@ public class SendMeFragment extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_sendme, container, false);
-//        initView(root);
         return root;
     }
 
     private void initView(View v) {
         headerView = ((LinearLayout) root.findViewById(R.id.sendme_header));
         recyclerView = (SuperRecyclerView) v.findViewById(R.id.sendme_recyclerview);
-        sendme_fl_wyjj= (FrameLayout) v.findViewById(R.id.sendme_fl_wyjj);
-        sendme_fl_wyjj.setOnClickListener(this);
+        sendmeBtn = (FrameLayout) v.findViewById(R.id.sendme_fl_wyjj);
+        sendmeBtn.setOnClickListener(this);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
         recyclerView.hideProgress();
@@ -82,6 +81,8 @@ public class SendMeFragment extends Fragment implements View.OnClickListener{
                 }
             }
         });
+
+        adapter.setOnRecyclerOnClickListener(this);
     }
 
     public void setLayout() {
@@ -115,11 +116,17 @@ public class SendMeFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.sendme_fl_wyjj:
-                startActivity(new Intent(this.getActivity(),WantSendActivity.class));
+                startActivity(new Intent(this.getActivity(), WantSendActivity.class));
                 break;
         }
+    }
+
+    @Override
+    public void onItemClick(View v, int position) {
+        Intent intent = new Intent();
+        intent.setClass(this.getActivity(), SendmeInfoActivity.class);
+        startActivity(intent);
     }
 }

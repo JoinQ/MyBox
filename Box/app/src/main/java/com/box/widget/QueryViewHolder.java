@@ -54,7 +54,7 @@ public class QueryViewHolder extends BaseViewHolder<QueryingSThing, QueryingGThi
         }
         mHeader.setImageResource(data.getHeadImgId());
         mNameText.setText(data.getName());
-        mPhoneText.setText(data.getPhone());
+        mPhoneText.setText(data.getIdNumber());
         mSecondLineText.setText(context.getString(R.string.recycleradapter_time, data.getTime()));
         mThreeLineText.setText(context.getString(R.string.recycleradapter_state, data.getState()));
         mComeRight.setVisibility(View.VISIBLE);
@@ -81,7 +81,7 @@ public class QueryViewHolder extends BaseViewHolder<QueryingSThing, QueryingGThi
         }
         mHeader.setImageResource(data.getHeadImgId());
         mNameText.setText(data.getName());
-        mPhoneText.setText(data.getPhone());
+        mPhoneText.setText(data.getIdNumber());
         mSecondLineText.setText(context.getString(R.string.recycleradapter_time, data.getTime()));
         mThreeLineText.setText(context.getString(R.string.recycleradapter_state, data.getState()));
         mPingLunBtn.setVisibility(View.INVISIBLE);

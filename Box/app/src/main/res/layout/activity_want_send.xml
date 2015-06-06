@@ -2,10 +2,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.box.box.customer.exress.functionfragment.sendme.WantSendActivity"
+    android:background="@android:color/white"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/white">
+    tools:context="com.box.box.customer.exress.functionfragment.sendme.WantSendActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,26 +23,27 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/wantsend_jjr" />
+                    android:text="@string/wantsend_jjr"
+                    android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/want_send_et_jjr"
+                    android:id="@+id/wantsend_sendname_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:textColor="@android:color/black"
-                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:background="@null"
                     android:cursorVisible="true"
-                    android:background="@null" />
+                    android:maxLength="10"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/my_info_view" />
 
             <LinearLayout
@@ -52,26 +53,27 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/wantsend_sjr" />
+                    android:text="@string/wantsend_sjr"
+                    android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/want_send_et_sjr"
+                    android:id="@+id/wantsend_getname_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:textColor="@android:color/black"
-                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:background="@null"
                     android:cursorVisible="true"
-                    android:background="@null" />
+                    android:maxLength="10"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/my_info_view" />
 
             <LinearLayout
@@ -81,26 +83,28 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/wantsend_phone" />
+                    android:text="@string/wantsend_sendphone"
+                    android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/want_send_et_phone"
+                    android:id="@+id/wantsend_sendphone_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:textColor="@android:color/black"
-                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:background="@null"
                     android:cursorVisible="true"
-                    android:background="@null" />
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/my_info_view" />
 
             <LinearLayout
@@ -110,26 +114,28 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/wantsend_boxid" />
+                    android:text="@string/wantsend_getphone"
+                    android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/want_send_et_boxid"
+                    android:id="@+id/wantsend_getphone_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:textColor="@android:color/black"
-                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:background="@null"
                     android:cursorVisible="true"
-                    android:background="@null" />
+                    android:inputType="number"
+                    android:maxLength="20"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/my_info_view" />
 
             <LinearLayout
@@ -139,26 +145,26 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/wantsend_address" />
+                    android:text="@string/wantsend_sendaddress"
+                    android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/want_send_et_address"
+                    android:id="@+id/wantsend_sendaddress_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:textColor="@android:color/black"
-                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:background="@null"
                     android:cursorVisible="true"
-                    android:background="@null" />
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/my_info_view" />
 
             <LinearLayout
@@ -168,34 +174,27 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/wantsend_pay" />
+                    android:text="@string/wantsend_getaddress"
+                    android:textSize="16sp" />
 
-                <Button
-                    android:id="@+id/want_send_alipay"
-                    android:layout_width="72dp"
-                    android:layout_height="36dp"
-                    android:background="@drawable/want_send_button_shape_on"
-                    android:textColor="@color/want_send_button_on"
-                    android:layout_marginRight="10dp"
-                    android:text="支付宝" />
-
-                <Button
-                    android:id="@+id/want_send_arrivepay"
-                    android:layout_width="72dp"
-                    android:layout_height="36dp"
-                    android:background="@drawable/want_send_button_shape_off"
-                    android:textColor="@color/want_send_button_off"
-                    android:text="到付" />
-
+                <EditText
+                    android:id="@+id/wantsend_getaddress_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
             </LinearLayout>
+
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
                 android:background="@color/my_info_view" />
 
             <LinearLayout
@@ -206,31 +205,53 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
                     android:layout_gravity="center_vertical"
+                    android:text="备注："
                     android:textColor="@android:color/black"
-                    android:text="备注：" />
+                    android:textSize="16sp" />
 
                 <EditText
-                    android:id="@+id/want_send_et_remarks"
-                    android:padding="4dp"
+                    android:id="@+id/wantsend_comment_edt"
                     android:layout_width="match_parent"
                     android:layout_height="96dp"
-                    android:layout_marginTop="8dp"
                     android:layout_gravity="center_vertical"
-                    android:textColor="@android:color/black"
-                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/want_send_remarks"
                     android:cursorVisible="true"
                     android:gravity="top"
-                    android:background="@drawable/want_send_remarks" />
+                    android:maxLength="15"
+                    android:padding="4dp"
+                    android:textColor="@android:color/black"
+                    android:textCursorDrawable="@drawable/color_cursor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/15"
+                        android:textColor="@android:color/black"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
                 <Button
-                    android:id="@+id/want_send_bt_submit"
+                    android:id="@+id/wantsend_submit_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/want_send_button_shape"
-                    android:text="提交"/>
+                    android:text="提交" />
             </LinearLayout>
 
         </LinearLayout>

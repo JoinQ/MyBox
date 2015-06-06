@@ -61,8 +61,8 @@ public class CourierMainActivity extends BoxActivity implements View.OnClickList
         tabSearch = (Tab) findViewById(R.id.tab_courier_search);
         tabMe = (Tab) findViewById(R.id.tab_courier_me);
 
-        tabOrder.initTab(R.drawable.tab_courier_order, R.drawable.tab_courier_order_no, R.color.courierActionbarColor, R.color.tab_noselect, "寄件名单");
-        tabSearch.initTab(R.drawable.tab_courier_search, R.drawable.tab_courier_search_no, R.color.courierActionbarColor, R.color.tab_noselect, "附近订单");
+        tabOrder.initTab(R.drawable.tab_courier_order, R.drawable.tab_courier_order_no, R.color.courierActionbarColor, R.color.tab_noselect, "发件名单");
+        tabSearch.initTab(R.drawable.tab_courier_search, R.drawable.tab_courier_search_no, R.color.courierActionbarColor, R.color.tab_noselect, "附近寄件");
         tabMe.initTab(R.drawable.tab_courier_me, R.drawable.tab_courier_me_no, R.color.courierActionbarColor, R.color.tab_noselect, "个人中心");
 
         tabOrder.setViewSelect();

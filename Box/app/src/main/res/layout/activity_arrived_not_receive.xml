@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:padding="16dp"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context="com.box.box.customer.exress.functionfragment.arrive.ArrivedInfoActivity">
 
     <LinearLayout
@@ -14,97 +14,97 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="快递公司:" />
+                android:text="快递公司:"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/arr_not_rec_tv_courier_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="顺丰速运" />
+                android:text="顺丰速运"
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="订单号:" />
+                android:text="订单号:"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/arr_not_rec_tv_order_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="123456789111" />
+                android:text="123456789111"
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="快递员:" />
+                android:text="快递员:"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/arr_not_rec_tv_courier"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="12345678900" />
+                android:text="12345678900"
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="到货时间:" />
+                android:text="到货时间:"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/arr_not_rec_tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="2015-04-24 14：00" />
+                android:text="2015-04-24 14：00"
+                android:textColor="@android:color/black" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="取货地址:" />
+                android:text="取货地址:"
+                android:textColor="@android:color/black" />
 
             <TextView
                 android:id="@+id/arr_not_rec_tv_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="渝北XX小区2栋楼下XX柜5号" />
+                android:text="渝北XX小区2栋楼下XX柜5号"
+                android:textColor="@android:color/black" />
         </LinearLayout>
     </LinearLayout>
 
@@ -123,8 +123,8 @@
             android:id="@+id/arr_not_rec_tv_ywm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/black"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:textColor="@android:color/black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -138,8 +138,17 @@
         android:id="@+id/arr_not_rec_tv_exception"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/arrived_not_rec_exception"
         android:layout_gravity="bottom|right"
+        android:text="@string/arrived_not_rec_exception"
         android:textColor="@color/arrived_card_password" />
 
+
+    <Button
+        android:id="@+id/arr_not_rec_btn_ok"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/login_login_button_shape"
+        android:text="取件完成" />
 </FrameLayout>

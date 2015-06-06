@@ -4,15 +4,15 @@ public class QueryingGThing {
     private String number;
     private int headImgId;
     private String name;
-    private String phone;
+    private String idNumber;
     private String time;
     private String state;
 
-    public QueryingGThing(String number, int headImgId, String name, String phone, String time, String state) {
+    public QueryingGThing(String number, int headImgId, String name, String idNumber, String time, String state) {
         this.number = number;
         this.headImgId = headImgId;
         this.name = name;
-        this.phone = phone;
+        this.idNumber = idNumber;
         this.time = time;
         this.state = state;
     }
@@ -41,12 +41,12 @@ public class QueryingGThing {
         this.name = name;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getIdNumber() {
+        return idNumber;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setIdNumber(String idNumber) {
+        this.idNumber = idNumber;
     }
 
     public String getTime() {

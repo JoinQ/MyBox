@@ -1,7 +1,5 @@
 package com.box.app;
 
-import android.util.Log;
-
 import com.alibaba.fastjson.JSON;
 import com.android.http.RequestManager;
 import com.box.util.Constant;

@@ -8,17 +8,10 @@ import com.box.mode.ArrivingThing;
 import com.box.mode.Things;
 
 public class ArriveRecyclerAdapter extends BaseRecyclerAdapter<Things> {
-    private ArrivedThing[] arrivedThings;
-    private ArrivingThing[] arrivingThings;
-
     private BaseViewHolder myViewHolder;
 
     public ArriveRecyclerAdapter(Things<ArrivedThing, ArrivingThing> things, Context context) {
         super(things, context);
-        if (things != null) {
-            arrivedThings = things.getT();
-            arrivingThings = things.getM();
-        }
     }
 
     @Override
@@ -31,19 +24,21 @@ public class ArriveRecyclerAdapter extends BaseRecyclerAdapter<Things> {
     public void OnBindViewHolder(BaseViewHolder holder, int position) {
         holder.itemView.setId(position);
         holder.itemView.setTag("cao");
-        if (arrivedThings != null && arrivingThings != null) {
-            if (arrivedThings.length != 0 || arrivingThings.length != 0) {
-                if (position + 1 > arrivedThings.length) {
-                    if (position == arrivedThings.length) {
-                        myViewHolder.setSecondData(arrivingThings[position - arrivedThings.length], true);
+        if (getItem(position) != null) {
+            if (getItem(position).getT() != null && getItem(position).getM() != null) {
+                if (getItem(position).getT().length != 0 || getItem(position).getM().length != 0) {
+                    if (position + 1 > getItem(position).getT().length) {
+                        if (position == getItem(position).getT().length) {
+                            myViewHolder.setSecondData(getItem(position).getM()[position - getItem(position).getT().length], true);
+                        } else {
+                            myViewHolder.setSecondData(getItem(position).getM()[position - getItem(position).getT().length], false);
+                        }
                     } else {
-                        myViewHolder.setSecondData(arrivingThings[position - arrivedThings.length], false);
-                    }
-                } else {
-                    if (position == 0) {
-                        myViewHolder.setFirstData(arrivedThings[position], true);
-                    } else {
-                        myViewHolder.setFirstData(arrivedThings[position], false);
+                        if (position == 0) {
+                            myViewHolder.setFirstData(getItem(position).getT()[position], true);
+                        } else {
+                            myViewHolder.setFirstData(getItem(position).getT()[position], false);
+                        }
                     }
                 }
             }

@@ -8,70 +8,48 @@
     <string name="recycleradapter_onroad">在途中 (%1$s)</string>
     <string name="recycleradapter_wayget">已到订单 (%1$s)</string>
     <string name="recycleradapter_waysend">在途中 (%1$s)</string>
+    <string name="recycleradapter_phone">寄件电话：%1$s</string>
+    <string name="recycleradapter_address">寄件地址：%1$s</string>
 
     <string name="login_forget"><u>忘记密码?</u></string>
 
     <string name="wantsend_jjr"><font color="red">*</font><font color="black">寄件人：</font></string>
     <string name="wantsend_sjr"><font color="red">*</font><font color="black">收件人：</font></string>
-    <string name="wantsend_phone"><font color="red">*</font><font color="black">电话：</font></string>
-    <string name="wantsend_boxid"><font color="red">*</font><font color="black">寄件地址：</font></string>
-    <string name="wantsend_address"><font color="red">*</font><font color="black">收件地址：</font></string>
-    <string name="wantsend_pay"><font color="red">*</font><font color="black">付款方式：</font></string>
+    <string name="wantsend_sendphone"><font color="red">*</font><font color="black">寄件人电话：</font></string>
+    <string name="wantsend_getphone"><font color="red">*</font><font color="black">收件人电话：</font></string>
+    <string name="wantsend_sendaddress"><font color="red">*</font><font color="black">寄件地址：</font></string>
+    <string name="wantsend_getaddress"><font color="red">*</font><font color="black">收件地址：</font></string>
     <string name="wantsend_weight"><font color="red">*</font><font color="black">重量：</font></string>
-
-    <string name="sendmepay_order_info"><font color="red">*</font><font color="black">订单信息：</font></string>
-    <string name="sendmepay_order_jjr"><font color="red">*</font><font color="black">寄件人：</font></string>
-    <string name="sendmepay_order_sjr"><font color="red">*</font><font color="black">收件人：</font></string>
-    <string name="sendmepay_order_phone"><font color="red">*</font><font color="black">电话：</font></string>
-    <string name="sendmepay_order_boxid"><font color="red">*</font><font color="black">寄件地址：</font></string>
-    <string name="sendmepay_order_address"><font color="red">*</font><font color="black">收件地址：</font></string>
-    <string name="sendmepay_order_pay"><font color="red">*</font><font color="black">付款方式：</font></string>
-    <string name="sendmepay_order_weight"><font color="red">*</font><font color="black">重量：</font></string>
-    <string name="sendmepay_order_money"><font color="red">*运费总价：</font></string>
-
-    <string name="edit_information_name"><font color="red">*</font><font color="black">昵称：</font></string>
-    <string name="edit_information_nowplace"><font color="red">*</font><font color="black">详细地址：</font></string>
-    <string name="edit_information_code"><font color="black">邮编：</font></string>
-    <string name="edit_information_birthday"><font color="black">生日：</font></string>
-    <string name="edit_information_gender"><font color="red">*</font><font color="black">性别：</font></string>
-    <string name="edit_information_email"><font color="black">邮箱：</font></string>
-    <string name="edit_information_about"><font color="black">个人说明：</font></string>
-    <string name="edit_information_phone"><font color="red">*</font><font color="black">联系电话：</font></string>
-    <string name="edit_information_com"><font color="red">*</font><font color="black">所属公司：</font></string>
-
-
+    <string name="wantsend_beck"><font color="red">*</font><font color="black">备注：</font></string>
+    <string name="wantsend_money"><font color="red">*</font><font color="black">运费总价：</font></string>
 
     <string name="recycleradapter_time">到达时间：%1$s</string>
     <string name="recycleradapter_place">到达地址：%1$s</string>
     <string name="recycleradapter_sendtime">发货时间：%1$s</string>
     <string name="recycleradapter_gettime">取走时间：%1$s</string>
 
-    <string name="recycleradapter_state">详情：%1$s</string>
+    <string name="recycleradapter_state">备注：%1$s</string>
     <string name="recycleradapter_pinglun">评论：%1$s</string>
     <string name="recycleradapter_receiver">收件人：%1$s(%2$s)</string>
 
-    <string name="title_activity_express_information">QueryInfoActivity</string>
+    <string name="arrived_not_rec_exception"><u>取件异常?</u></string>
 
+    <string name="title_activity_express_information">QueryInfoActivity</string>
     <string name="title_activity_arrived_not_receive">ArrivedNotReceiveActivity</string>
     <string name="title_activity_courier_main">CourierMainActivity</string>
-
     <string name="title_activity_arriving_info">ArrivingInfoActivity</string>
-
-    <string name="arrived_not_rec_exception"><u>取件异常?</u></string>
     <string name="title_activity_my_information">MyInformationActivity</string>
     <string name="title_activity_setting">SettingActivity</string>
     <string name="title_activity_rank">RankActivity</string>
     <string name="title_activity_want_send">WantSendActivity</string>
     <string name="title_activity_sendme_pay">SendmePayActivity</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
     <string name="title_activity_courier_get_express">CourierGetExpress</string>
     <string name="title_activity_courier_feedback">CourierFeedbackActivity</string>
     <string name="title_activity_feedback">feedbackActivity</string>
-    <string name="title_activity_edit_information">EditInformationActivity</string>
-    <string name="title_activity_edit_courier_information">EditCourierInformationActivity</string>
-
+    <string name="title_activity_courier_order_info">CourierOrderInfoActivity</string>
+    <string name="title_activity_courier_search_info">CourierSearchfoActivity</string>
+    <string name="title_activity_courier_serchsend_info">CourierSearchSendActivity</string>
+    <string name="title_activity_courier_ordersend_info">CourierOrderSendActivity</string>
 
 
 </resources>

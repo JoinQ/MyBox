@@ -1,57 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:recycler="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroud"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:background="@color/courier_search_spinner_background">
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_weight="1">
-
-            <Spinner
-                android:id="@+id/courier_search_sp_site"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"></Spinner>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingRight="16dp"
-                android:layout_gravity="right"
-                android:gravity="center_vertical|right">
-
-                <TextView
-                    android:id="@+id/courier_search_tv_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:text="2015/05/31" />
-
-                <TextView
-                    android:id="@+id/courier_search_tv_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@android:color/black"
-                    android:text="18:26" />
-
-            </LinearLayout>
-        </FrameLayout>
-    </LinearLayout>
-
-
-    <com.box.view.SlideCutListView
-        android:id="@+id/courier_search_slideCutListView"
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+        android:id="@+id/courier_search_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:listSelector="@android:color/transparent"
-        android:cacheColorHint="@android:color/transparent"></com.box.view.SlideCutListView>
+        recycler:layout_empty="@layout/view_empty"
+        recycler:layout_moreProgress="@layout/view_progress"
+        recycler:layout_progress="@layout/view_progress"
+        recycler:scrollbarStyle="insideInset" />
 
 </LinearLayout>

@@ -3,20 +3,21 @@ package com.box.widget;
 import android.content.Context;
 import android.view.ViewGroup;
 
-import com.box.mode.CurrentThing;
+import com.box.mode.OrderInfoThing;
+import com.box.mode.SearchInfoThing;
 
 import java.text.ParseException;
 
-public class CourierCurrentRecyclerAdapter extends BaseRecyclerAdapter<CurrentThing> {
+public class CourierSearchInfoRecyclerAdapter extends BaseRecyclerAdapter<SearchInfoThing> {
     private BaseViewHolder myViewHolder;
 
-    public CourierCurrentRecyclerAdapter(CurrentThing[] things, Context context) {
+    public CourierSearchInfoRecyclerAdapter(SearchInfoThing[] things, Context context) {
         super(things, context);
     }
 
     @Override
     public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
-        myViewHolder = new CourierCurrentViewHolder(parent);
+        myViewHolder = new CourierSearchInfoViewHolder(parent);
         return myViewHolder;
     }
 

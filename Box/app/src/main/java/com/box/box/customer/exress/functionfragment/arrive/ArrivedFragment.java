@@ -67,7 +67,7 @@ public class ArrivedFragment extends Fragment {
             @Override
             public void onItemClick(View v, int position) {
 
-                if ((position+1) <= arrivedThingslength)
+                if ((position + 1) <= arrivedThingslength)
                     startActivity(new Intent(ArrivedFragment.this.getActivity()
                             , ArrivedInfoActivity.class));
                 else

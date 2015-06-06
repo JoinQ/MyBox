@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_width="wrap_content">
     <!-- 填充的颜色 -->
-    <solid android:color="#2688d0" />
+    <solid android:color="@color/actionbarColor" />
     <!-- 设置按钮的四个角为弧形 -->
     <!-- android:radius 弧形的半径 -->
     <corners android:radius="5dip" />

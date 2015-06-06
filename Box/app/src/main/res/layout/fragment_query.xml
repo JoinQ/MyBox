@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroud"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/query_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/backgroud"
-        android:visibility="gone"
         android:orientation="vertical">
 
         <EditText
@@ -22,10 +21,12 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/edit_bg"
             android:drawableStart="@drawable/search"
-            android:hint="输入订单号或名称查询快递"
-            android:singleLine="true"
+            android:hint="输入订单号查询快递"
             android:inputType="numberDecimal"
             android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@drawable/color_cursor"
             android:textSize="13sp" />
 
         <View
@@ -38,7 +39,7 @@
         android:id="@+id/query_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        recycler:layout_empty="@layout/view_empty"
+        recycler:layout_empty="@null"
         recycler:layout_moreProgress="@layout/view_progress"
         recycler:layout_progress="@layout/view_progress"
         recycler:scrollbarStyle="insideInset" />
