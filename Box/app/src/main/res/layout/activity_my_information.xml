@@ -35,12 +35,15 @@
                     android:orientation="vertical"
                     android:layout_gravity="center_vertical|right">
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/information_ed_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="超级无敌小旋风"
                         android:layout_gravity="right"
                         android:textSize="16sp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
                         android:textColor="@color/arrived_card_font" />
 
                     <LinearLayout
@@ -104,12 +107,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="电话"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/arrived_card_font" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/information_ed_phone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
+                        android:focusable="false"
+                        android:textSize="16sp"
+                        android:focusableInTouchMode="false"
+                        android:textColor="@android:color/black"
                         android:text="12345678900" />
                 </FrameLayout>
 
@@ -138,6 +147,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
+                        android:textColor="@android:color/black"
                         android:text="10000积分" />
                 </FrameLayout>
             </LinearLayout>
@@ -163,12 +173,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="故乡"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/arrived_card_font" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/information_ed_hometown"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:focusable="false"
                         android:layout_gravity="right"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:focusableInTouchMode="false"
                         android:text="请输入你的故乡" />
                 </FrameLayout>
 
@@ -191,14 +207,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="所在地"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/arrived_card_font" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/information_ed_nowplace"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
+                        android:textSize="16sp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textColor="@android:color/black"
                         android:text="重庆 南岸区" />
                 </FrameLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -218,12 +241,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="邮编"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/arrived_card_font" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/information_ed_code"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
                         android:layout_gravity="right"
+                        android:textColor="@android:color/black"
                         android:text="400065" />
                 </FrameLayout>
             </LinearLayout>
@@ -249,13 +278,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="生日"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/arrived_card_font" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/information_ed_birthday"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:editable="false"
+                        android:background="@null"
+                        android:textSize="16sp"
                         android:layout_gravity="right"
+                        android:textColor="@android:color/black"
                         android:text="1993-10-01" />
+
+
                 </FrameLayout>
 
                 <View
@@ -267,24 +304,67 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp" />
 
-                <FrameLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
+                    android:orientation="horizontal"
                     android:layout_marginRight="12dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="性别"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/arrived_card_font" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:text="女" />
-                </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/information_ed_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:editable="false"
+                            android:textSize="16sp"
+                            android:background="@null"
+                            android:layout_gravity="right"
+                            android:textColor="@android:color/black"
+                            android:text="男" />
+
+
+                        <LinearLayout
+                            android:id="@+id/information_ll_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:visibility="gone">
+
+                            <Button
+                                android:id="@+id/edit_information_gender_man"
+                                android:layout_width="72dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/want_send_button_shape_on"
+                                android:textColor="@color/want_send_button_on"
+                                android:layout_marginRight="10dp"
+                                android:text="男" />
+
+                            <Button
+                                android:id="@+id/edit_information_gender_women"
+                                android:layout_width="72dp"
+                                android:layout_height="36dp"
+                                android:background="@drawable/want_send_button_shape_off"
+                                android:textColor="@color/want_send_button_off"
+                                android:text="女" />
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -304,18 +384,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="邮箱"
+                        android:layout_gravity="center_vertical"
                         android:textColor="@color/arrived_card_font" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/information_ed_email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
                         android:layout_gravity="right"
+                        android:textColor="@android:color/black"
                         android:text="请输入你的邮箱" />
                 </FrameLayout>
             </LinearLayout>
-
-
-
 
 
         </LinearLayout>
